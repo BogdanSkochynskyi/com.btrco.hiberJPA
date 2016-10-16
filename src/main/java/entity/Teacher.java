@@ -16,9 +16,14 @@ public class Teacher {
 	@Column(name = "experience")
 	private int experience;
 
-	public Teacher(String name, int experience) {
+	@ManyToOne(cascade =  CascadeType.ALL)
+	@JoinColumn(name = "subject_id", referencedColumnName = "id")
+	private Subject subject;
+
+	public Teacher(String name, int experience, Subject subject) {
 		this.name = name;
 		this.experience = experience;
+		this.subject = subject;
 	}
 
 	public Teacher() {
@@ -42,6 +47,14 @@ public class Teacher {
 
 	public void setExperience(int experience) {
 		this.experience = experience;
+	}
+
+	public Subject getSubject() {
+		return subject;
+	}
+
+	public void setSubject(Subject subject) {
+		this.subject = subject;
 	}
 
 	@Override

@@ -1,91 +1,107 @@
 package dao;
 
-import dao.service.IGroupDao;
-import dao.service.IStudentDao;
-import dao.service.ServiceFactory;
+import dao.impl.mysql.IGroupDao;
+import dao.impl.mysql.IStudentDao;
+import dao.impl.mysql.ServiceFactory;
 import entity.Group;
 import entity.Student;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import utils.HibernateUtils;
+import utils.TestUtils;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 
 public class StudentDaoTest {
 	private static EntityManager entityManager;
-	private static IStudentDao studentCrudDao = ServiceFactory.getStudentServiceInstance();
-	private static IGroupDao groupCrudDao = ServiceFactory.getGroupServiceInstance();
+	private static IStudentDao studentCrudDao;
+	private static IGroupDao groupCrudDao;
+	private Student student;
 
 	@BeforeClass
 	public static void initializeConections() {
 		entityManager = HibernateUtils.getEntityManager();
-		StudentDaoImpl.setEntityManager(entityManager);
-		GroupDaoImpl.setEntityManager(entityManager);
+
+		studentCrudDao = new StudentDaoImpl(entityManager);
+		groupCrudDao = new GroupDaoImpl(entityManager);
+
+		TestUtils.addDataIntoDB();
 	}
 
 	@AfterClass
 	public static void shutdownConnection() {
+		TestUtils.trancateTables();
+
 		entityManager.clear();
 		entityManager.close();
+
 	}
 
-	@Test
-	public void testGetListOfStudentsInGroup() {
-		Group group = groupCrudDao.findById(29);
+	@Before
+	public void initDataInDB() {
+		Group group = groupCrudDao.findById(groupCrudDao.getAll(0,1).get(0).getId());
+		this.student = new Student("Student name", group);
+		studentCrudDao.create(this.student);
+	}
 
-		List<Student> studentList = studentCrudDao.getListOfStudentsInGroup(group);
-		Assert.assertNotNull(studentList);
-
+	@After
+	public void removeDataFromDB() {
+		if (studentCrudDao.findById(this.student.getId()) != null) {
+			studentCrudDao.delete(this.student);
+		}
 	}
 
 	@Test
 	public void testCreateStudent() {
-		Group group = groupCrudDao.findById(3);
-		Student expectedStudent = new Student("Bogdan", group);
+		Group group = groupCrudDao.findById(groupCrudDao.getAll(0,2).get(1).getId());
 
-		Student actualStudent = studentCrudDao.create(expectedStudent);
+		Student actualStudent = studentCrudDao.create(new Student("Bogdan", group));
 
 		Assert.assertNotNull(actualStudent);
 	}
 
 	@Test
-	public void testDeleteGroup() {
-		Group expectedGroup = new Group("ACP15");
+	public void testDeleteStudent() {
+		Student actualStudent = studentCrudDao.findById(this.student.getId());
+		boolean actualResult = studentCrudDao.delete(actualStudent);
 
-		Group actualGroup = groupCrudDao.findById(1);
-		boolean expectedResult = true;
-		boolean actualResult = groupCrudDao.delete(actualGroup);
+		Assert.assertTrue(actualResult);
+	}
 
+	@Test
+	public void testUpdateStudent() {
+		Student expectedResult = studentCrudDao.findById(this.student.getId());
+		expectedResult.setName("Dima");
+
+		studentCrudDao.update(expectedResult);
+
+		Student actualResult = studentCrudDao.findById(expectedResult.getId());
 		Assert.assertEquals(expectedResult, actualResult);
 	}
 
 	@Test
-	public void testUpdateGroup() {
-		Group initialGroup = new Group("ACP16");
+	public void testFindById() {
+		Student actualGroup = studentCrudDao.findById(this.student.getId());
 
-		Group actualGroup = groupCrudDao.create(initialGroup);
-		actualGroup.setName("ACP16_1");
-
-		groupCrudDao.update(actualGroup);
-
-		Group updatedGroup = groupCrudDao.findById(actualGroup.getId());
-		System.out.println(updatedGroup);
+		Assert.assertEquals(this.student, actualGroup);
 	}
 
 	@Test
-	public void testFindById() {
-		Group initialGroup = new Group("ACP16");
-
-		Group expectedGroup = groupCrudDao.create(initialGroup);
-
-		Group actualGroup = groupCrudDao.findById(expectedGroup.getId());
-
-		Assert.assertEquals(expectedGroup, actualGroup);
+	public void testGetAll() {
+		int firstRow = 0;
+		int rowAmount = 20;
+		List<Student> students = studentCrudDao.getAll(firstRow, rowAmount);
+		Assert.assertTrue(students.size() == rowAmount);
 	}
 
+	@Test
+	public void testGetListOfStudentsInGroup() {
+		Group group = groupCrudDao.findById(groupCrudDao.getAll(0,1).get(0).getId());
+
+		List<Student> studentList = studentCrudDao.getListOfStudentsInGroup(group);
+		Assert.assertNotNull(studentList);
+
+	}
 	//Если вытянуть группу из таблицы, а потом вызвать getStudents, то студенты вытянутся из БД. До этого их в группе не было.
 	//Для этого хибернейт юзает  PersistentBag класс, который наследуетсчяя от List, поэтому нельзя использовать в таких случаях например ArrayList
 	//Pattern proxy or adapter

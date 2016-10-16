@@ -21,6 +21,9 @@ public class Subject {
 	@JoinTable
 	private List<Group> groups;
 
+	@OneToMany(mappedBy = "subject")
+	private List<Teacher> teachers;
+
 	public Subject(String name, String description) {
 		this.name = name;
 		this.description = description;
@@ -47,6 +50,22 @@ public class Subject {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public List<Group> getGroups() {
+		return groups;
+	}
+
+	public void setGroups(List<Group> groups) {
+		this.groups = groups;
+	}
+
+	public List<Teacher> getTeachers() {
+		return teachers;
+	}
+
+	public void setTeachers(List<Teacher> teachers) {
+		this.teachers = teachers;
 	}
 
 	@Override

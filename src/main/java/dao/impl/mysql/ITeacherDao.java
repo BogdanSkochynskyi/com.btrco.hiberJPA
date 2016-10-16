@@ -1,4 +1,4 @@
-package dao.service;
+package dao.impl.mysql;
 
 import entity.Teacher;
 
@@ -10,6 +10,6 @@ public interface ITeacherDao extends CrudDao<Teacher> {
 
 	Teacher getLessExperienceTeacher();
 
-	List<Teacher> getTeachersWithMoreThanThreeYearsExperience();
+	List<Teacher> getTeachersWithMoreThanThreeYearsExperience(int experience);
 
 }

@@ -1,4 +1,4 @@
-package dao.service;
+package dao.impl.mysql;
 
 import java.util.List;
 
@@ -12,6 +12,6 @@ public interface CrudDao<T> {
 
 	T findById(Object id);
 
-	List<T> getAll();
+	List<T> getAll(int firstRow, int rowAmount);
 
 }

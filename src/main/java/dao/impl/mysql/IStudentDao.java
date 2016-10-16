@@ -1,4 +1,4 @@
-package dao.service;
+package dao.impl.mysql;
 
 import entity.Group;
 import entity.Student;
