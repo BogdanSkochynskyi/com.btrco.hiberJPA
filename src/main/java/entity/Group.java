@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "groups")
@@ -12,6 +13,18 @@ public class Group {
 
 	@Column(name = "name", length = 45)
 	private String name;
+
+	//mappedBy = field, described reference between, for configure join columns
+	@OneToMany(mappedBy = "group", fetch = FetchType.LAZY) //LAZY -только когда нужен лист студентов, EAGER - сразу вытягивает.
+	//Надо юзать LAZY чтобы вытягивать инфу порциями
+	private List<Student> students;
+
+	@ManyToMany
+	@JoinTable(name = "groups_subjects",
+			joinColumns = {@JoinColumn(name = "group_id", referencedColumnName = "id")},
+			inverseJoinColumns = {@JoinColumn(name = "subject_id", referencedColumnName = "id")})
+	//лучше юзать отдельную энтити для groups_subjects таблицы
+	private List<Subject> subjects;
 
 	public Group() {}
 
@@ -29,6 +42,14 @@ public class Group {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public List<Student> getStudents() {
+		return students;
+	}
+
+	public void setStudents(List<Student> students) {
+		this.students = students;
 	}
 
 	@Override

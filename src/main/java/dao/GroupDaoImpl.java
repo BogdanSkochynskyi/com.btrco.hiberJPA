@@ -1,28 +1,33 @@
 package dao;
 
+import dao.service.IGroupDao;
 import entity.Group;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import utils.HibernateUtils;
 import utils.Utils;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import java.util.List;
 
-public class GroupDaoImpl implements CrudDao<Group> {
+public class GroupDaoImpl implements IGroupDao {
 
-	private EntityManagerFactory factory;
 	private static final Logger LOG = Logger.getLogger(GroupDaoImpl.class);
+	private static EntityManager entityManager;
+	private static final String GET_ALL_GROUPS = "SELECT g FROM Group g";
 
-	public GroupDaoImpl(EntityManagerFactory factory) {
+	static {
+		entityManager = HibernateUtils.getEntityManager();
+	}
+	public GroupDaoImpl() {
 		LOG.setLevel(Level.INFO);
 		LOG.info("Group DAO created");
-		this.factory = factory;
 	}
 
 	public Group create(Group group) {
 		LOG.info("User try to create group");
-		EntityManager manager = this.factory.createEntityManager();
+		EntityManager manager = HibernateUtils.getEntityManager();
 		EntityTransaction transaction = manager.getTransaction();
 		try{
 			transaction.begin();
@@ -45,11 +50,13 @@ public class GroupDaoImpl implements CrudDao<Group> {
 
 	public boolean delete(Group group) {
 		LOG.info("User try to delete group");
-		EntityManager manager = this.factory.createEntityManager();
+		EntityManager manager = HibernateUtils.getEntityManager();
 		EntityTransaction transaction = manager.getTransaction();
 		try{
 			transaction.begin();
 			LOG.info("Transaction began");
+			group = manager.find(Group.class, group.getId());
+			LOG.info("Add group into managed context");
 			manager.remove(group);
 			LOG.info("Group removed");
 			transaction.commit();
@@ -67,7 +74,7 @@ public class GroupDaoImpl implements CrudDao<Group> {
 	}
 
 	public boolean update(Group group) {
-		EntityManager manager = this.factory.createEntityManager();
+		EntityManager manager = HibernateUtils.getEntityManager();
 		EntityTransaction transaction = manager.getTransaction();
 
 		Group groupFromDB = manager.find(Group.class, group.getId()); //can we call findById method?
@@ -87,12 +94,21 @@ public class GroupDaoImpl implements CrudDao<Group> {
 	}
 
 	public Group findById(Object id) {
-		EntityManager manager = this.factory.createEntityManager();
+		EntityManager manager = HibernateUtils.getEntityManager();
 		try {
 			Group groupFromDB = manager.find(Group.class, id);
 			return groupFromDB;
 		} finally {
 			manager.close();
 		}
+	}
+
+	@Override
+	public List<Group> getAll() {
+		return entityManager.createQuery(GET_ALL_GROUPS).setMaxResults(100).getResultList();
+	}
+
+	public static void setEntityManager(EntityManager entityManager) {
+		GroupDaoImpl.entityManager = entityManager;
 	}
 }

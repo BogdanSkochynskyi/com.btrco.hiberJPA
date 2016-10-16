@@ -1,80 +1,103 @@
 package dao;
 
-import entity.Student;
+import dao.service.ISubjectDao;
 import entity.Subject;
+import utils.HibernateUtils;
 import utils.Utils;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import java.util.List;
 
-public class SubjectDaoImpl implements CrudDao<Subject>{
+public class SubjectDaoImpl implements ISubjectDao {
 
-	private EntityManagerFactory factory;
+	private static final String GET_GUMANITARIUM_SUBJECTS	= "SELECT s FROM Subject s WHERE s.name IN ('history', 'literature', 'phylosophy')";
+	private static EntityManager entityManager;
+	private static final String GET_ALL_SUBJECTS = "SELECT s FROM Subject s";
 
-	public SubjectDaoImpl(EntityManagerFactory factory) {
-		this.factory = factory;
+	static {
+		entityManager = HibernateUtils.getEntityManager();
+	}
+
+	public SubjectDaoImpl() {
 	}
 
 	public Subject create(Subject subject) {
-		EntityManager manager = factory.createEntityManager();
-		EntityTransaction transaction = manager.getTransaction();
+		EntityTransaction transaction = entityManager.getTransaction();
 		try {
 			transaction.begin();
-			manager.persist(subject);
+			entityManager.persist(subject);
 			transaction.commit();
 		} catch (Exception e) {
 			transaction.rollback();
 			return null;
 		} finally {
-			manager.close();
+			entityManager.close();
 		}
 		return subject;
 	}
 
 	public boolean delete(Subject subject) {
-		EntityManager manager = factory.createEntityManager();
-		EntityTransaction transaction = manager.getTransaction();
+		EntityTransaction transaction = entityManager.getTransaction();
 		try {
 			transaction.begin();
-			manager.remove(subject);
+			entityManager.remove(subject);
 			transaction.commit();
 		} catch (Exception e) {
 			transaction.rollback();
 			return false;
 		} finally {
-			manager.close();
+			entityManager.close();
 		}
 		return true;
 	}
 
 	public boolean update(Subject subject) {
-		EntityManager manager = factory.createEntityManager();
-		EntityTransaction transaction = manager.getTransaction();
+		EntityTransaction transaction = entityManager.getTransaction();
 
-		Subject subjectFromDB = manager.find(Subject.class, subject.getId());
+		Subject subjectFromDB = entityManager.find(Subject.class, subject.getId());
 		Utils.copySubject(subject, subjectFromDB);
 
 		try {
 			transaction.begin();
-			manager.persist(subject);
+			entityManager.persist(subject);
 			transaction.commit();
 		} catch (Exception e) {
 			transaction.rollback();
 			return false;
 		} finally {
-			manager.close();
+			entityManager.close();
 		}
 		return true;
 	}
 
 	public Subject findById(Object id) {
-		EntityManager manager = factory.createEntityManager();
 		try {
-			Subject subjectFromDB = manager.find(Subject.class, id);
+			Subject subjectFromDB = entityManager.find(Subject.class, id);
 			return subjectFromDB;
 		} finally {
-			manager.close();
+			entityManager.close();
 		}
+	}
+
+	@Override
+	public List<Subject> getAll() {
+		return entityManager.createQuery(GET_ALL_SUBJECTS).setMaxResults(100).getResultList();
+	}
+
+	@Override
+	public List<Subject> getGumanitariumSubjects() {
+
+		List<Subject> gumanitariumSubjects = entityManager.createQuery(GET_GUMANITARIUM_SUBJECTS).getResultList();
+		if (gumanitariumSubjects != null) {
+			return gumanitariumSubjects;
+		}
+
+		return null;
+
+	}
+
+	public static void setEntityManager(EntityManager entityManager) {
+		SubjectDaoImpl.entityManager = entityManager;
 	}
 }

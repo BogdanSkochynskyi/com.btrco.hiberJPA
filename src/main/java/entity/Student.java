@@ -13,12 +13,18 @@ public class Student {
 	@Column(name = "name", length = 45)
 	private String name;
 
-	@Column(name = "group_id")
-	private int groupId;
+	@ManyToOne(cascade = CascadeType.PERSIST)//если этот объект переводится в какое то состояние,
+	// то и его поля если они объекты наши - тоже будут переведены в это состояние  //EMBEDED field(id -клас в котором может быть больше 1 поля)
+	// uniqueConstraint={@UniqueConstraint(columnNames={"city", "street"})}
+	@JoinColumn(name = "group_id", referencedColumnName = "id")
+	private Group group;
 
-	public Student(String name, int groupId) {
+	public Student(String name, Group group) {
 		this.name = name;
-		this.groupId = groupId;
+		this.group = group;
+	}
+
+	public Student() {
 	}
 
 	public int getId() {
@@ -33,12 +39,12 @@ public class Student {
 		this.name = name;
 	}
 
-	public int getGroupId() {
-		return groupId;
+	public Group getGroup() {
+		return group;
 	}
 
-	public void setGroupId(int groupId) {
-		this.groupId = groupId;
+	public void setGroup(Group groupName) {
+		this.group = groupName;
 	}
 
 	@Override
@@ -46,7 +52,7 @@ public class Student {
 		return "Student{" +
 				"id=" + id +
 				", name='" + name + '\'' +
-				", groupId=" + groupId +
+				", group=" + group +
 				'}';
 	}
 }

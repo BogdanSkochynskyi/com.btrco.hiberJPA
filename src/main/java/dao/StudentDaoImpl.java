@@ -1,79 +1,103 @@
 package dao;
 
+import dao.service.IStudentDao;
+import entity.Group;
 import entity.Student;
+import utils.HibernateUtils;
 import utils.Utils;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import java.util.List;
 
-public class StudentDaoImpl implements CrudDao<Student> {
+public class StudentDaoImpl implements IStudentDao {
 
-	private EntityManagerFactory factory;
+	private static final String GET_GROUP_OF_STUDENTS	= "SELECT s FROM Student s WHERE s.group LIKE :group";
+	private static final String GROUP = "group";
+	private static final String GET_ALL_STUDENTS = "SELECT s FROM Student s";
 
-	public StudentDaoImpl(EntityManagerFactory factory) {
-		this.factory = factory;
+	private static EntityManager entityManager;
+
+	static {
+		entityManager = HibernateUtils.getEntityManager();
+	}
+
+	public StudentDaoImpl() {
 	}
 
 	public Student create(Student student) {
-		EntityManager manager = factory.createEntityManager();
-		EntityTransaction transaction = manager.getTransaction();
+		EntityTransaction transaction = entityManager.getTransaction();
 		try {
 			transaction.begin();
-			manager.persist(student);
+			entityManager.persist(student); //entityManager.persisit(addrres) должны быть в контектсе два оъекта чтобы их связать
 			transaction.commit();
 		} catch (Exception e) {
 			transaction.rollback();
 			return null;
 		} finally {
-			manager.close();
+			entityManager.close();
 		}
 		return student;
 	}
 
 	public boolean delete(Student student) {
-		EntityManager manager = factory.createEntityManager();
-		EntityTransaction transaction = manager.getTransaction();
+		EntityTransaction transaction = entityManager.getTransaction();
 		try {
 			transaction.begin();
-			manager.remove(student);
+			entityManager.remove(student);
 			transaction.commit();
 		} catch (Exception e) {
 			transaction.rollback();
 			return false;
 		} finally {
-			manager.close();
+			entityManager.close();
 		}
 		return true;
 	}
 
 	public boolean update(Student student) {
-		EntityManager manager = factory.createEntityManager();
-		EntityTransaction transaction = manager.getTransaction();
+		EntityTransaction transaction = entityManager.getTransaction();
 
-		Student studentFromDB = manager.find(Student.class, student.getId());
+		Student studentFromDB = entityManager.find(Student.class, student.getId());
 		Utils.copyStudent(student, studentFromDB);
 
 		try {
 			transaction.begin();
-			manager.persist(student);
+			entityManager.persist(student);
 			transaction.commit();
 		} catch (Exception e) {
 			transaction.rollback();
 			return false;
 		} finally {
-			manager.close();
+			entityManager.close();
 		}
 		return true;
 	}
 
 	public Student findById(Object id) {
-		EntityManager manager = factory.createEntityManager();
 		try {
-			Student studentFromDB = manager.find(Student.class, id);
+			Student studentFromDB = entityManager.find(Student.class, id);
 			return studentFromDB;
 		} finally {
-			manager.close();
+			entityManager.close();
 		}
+	}
+
+	@Override
+	public List<Student> getAll() {
+		return entityManager.createQuery(GET_ALL_STUDENTS).setMaxResults(100).getResultList();
+	}
+
+	public List<Student> getListOfStudentsInGroup(Group group) {
+		List<Student> students = entityManager.createQuery(GET_GROUP_OF_STUDENTS)
+				.setParameter(GROUP, group).getResultList();
+		if (students != null) {
+			return students;
+		}
+		return null;
+	}
+
+	public static void setEntityManager(EntityManager entityManager) {
+		StudentDaoImpl.entityManager = entityManager;
 	}
 }

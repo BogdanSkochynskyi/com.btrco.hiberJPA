@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "subjects")
@@ -16,9 +17,16 @@ public class Subject {
 	@Column(name = "description")
 	private String description;
 
+	@ManyToMany
+	@JoinTable
+	private List<Group> groups;
+
 	public Subject(String name, String description) {
 		this.name = name;
 		this.description = description;
+	}
+
+	public Subject() {
 	}
 
 	public int getId() {

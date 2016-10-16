@@ -21,6 +21,9 @@ public class Teacher {
 		this.experience = experience;
 	}
 
+	public Teacher() {
+	}
+
 	public int getId() {
 		return id;
 	}

@@ -13,7 +13,7 @@ public class Utils {
 
 	public static void copyStudent(Student from, Student to){
 		to.setName(from.getName());
-		to.setGroupId(from.getGroupId());
+		to.setGroup(from.getGroup());
 	}
 
 	public static void copySubject(Subject from, Subject to) {

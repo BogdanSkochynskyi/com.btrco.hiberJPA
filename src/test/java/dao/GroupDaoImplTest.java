@@ -1,14 +1,30 @@
 package dao;
 
+import dao.service.CrudDao;
 import entity.Group;
+import org.junit.AfterClass;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
+import utils.HibernateUtils;
 
-import javax.persistence.Persistence;
+import javax.persistence.EntityManager;
 
 public class GroupDaoImplTest {
 
-	private final CrudDao<Group> groupCrudDao = new GroupDaoImpl(Persistence.createEntityManagerFactory("university"));
+	private static EntityManager entityManager;
+	private CrudDao<Group> groupCrudDao = new GroupDaoImpl();
+
+	@BeforeClass
+	public static void initializeConections() {
+		entityManager = HibernateUtils.getEntityManager();
+	}
+
+	@AfterClass
+	public static void shutdownConnection() {
+		entityManager.clear();
+		entityManager.close();
+	}
 
 	@Test
 	public void testCreateGroup() {
@@ -23,7 +39,7 @@ public class GroupDaoImplTest {
 	public void testDeleteGroup() {
 		Group expectedGroup = new Group("ACP15");
 
-		Group actualGroup = groupCrudDao.create(expectedGroup);
+		Group actualGroup = groupCrudDao.findById(1);
 		boolean expectedResult = true;
 		boolean actualResult = groupCrudDao.delete(actualGroup);
 

@@ -228,7 +228,7 @@
 2016-10-14 15:35:50 DEBUG Ejb3Configuration:315 - Look up for persistence unit: university
 2016-10-14 15:35:50 DEBUG Ejb3Configuration:850 - Detect class: true; detect hbm: true
 2016-10-14 15:35:50 DEBUG AbstractJarVisitor:126 - Searching mapped entities in jar/par: file:/Users/mac/Desktop/com.acp14.project/com.btrco.hiberJPA/target/classes/
-2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.CrudDao
+2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.service.CrudDao
 2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.GroupDaoImpl
 2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.StudentDaoImpl
 2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.SubjectDaoImpl
@@ -739,7 +739,7 @@
 2016-10-14 15:38:14 DEBUG Ejb3Configuration:315 - Look up for persistence unit: university
 2016-10-14 15:38:14 DEBUG Ejb3Configuration:850 - Detect class: true; detect hbm: true
 2016-10-14 15:38:14 DEBUG AbstractJarVisitor:126 - Searching mapped entities in jar/par: file:/Users/mac/Desktop/com.acp14.project/com.btrco.hiberJPA/target/classes/
-2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.CrudDao
+2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.service.CrudDao
 2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.GroupDaoImpl
 2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.StudentDaoImpl
 2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.SubjectDaoImpl
@@ -1067,3 +1067,400 @@
 2016-10-14 15:40:28 ERROR GroupDaoImpl:58 - Operation failed
 2016-10-14 15:40:28 INFO  GroupDaoImpl:60 - Transaction rolled back
 2016-10-14 15:40:28 INFO  GroupDaoImpl:64 - Manager closed
+2016-10-15 12:48:54 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 12:48:54 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 12:48:54 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 12:48:54 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 12:48:55 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 12:48:55 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 12:48:55 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 12:48:55 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 12:48:55 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 12:48:55 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 12:48:55 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 12:48:55 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 12:48:55 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 12:48:55 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Student (class must be instantiated by Interceptor)
+2016-10-15 12:48:55 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 12:48:55 INFO  GroupDaoImpl:19 - Group DAO created
+2016-10-15 12:48:55 INFO  GroupDaoImpl:24 - User try to create group
+2016-10-15 12:48:55 INFO  GroupDaoImpl:29 - Transaction began
+2016-10-15 12:48:55 INFO  GroupDaoImpl:31 - Group persisted
+2016-10-15 12:48:55 INFO  GroupDaoImpl:33 - Transaction commited
+2016-10-15 12:48:55 INFO  GroupDaoImpl:41 - Manager closed
+2016-10-15 12:48:55 INFO  GroupDaoImpl:47 - User try to delete group
+2016-10-15 12:48:55 INFO  GroupDaoImpl:52 - Transaction began
+2016-10-15 12:48:55 ERROR GroupDaoImpl:58 - Operation failed
+2016-10-15 12:48:55 INFO  GroupDaoImpl:60 - Transaction rolled back
+2016-10-15 12:48:55 INFO  GroupDaoImpl:64 - Manager closed
+2016-10-15 12:49:57 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 12:49:57 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 12:49:57 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 12:49:57 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 12:49:57 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 12:49:57 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 12:49:57 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 12:49:57 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 12:49:57 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 12:49:58 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 12:49:58 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 12:49:58 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 12:49:58 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 12:49:58 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Student (class must be instantiated by Interceptor)
+2016-10-15 12:49:58 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 12:49:58 INFO  GroupDaoImpl:19 - Group DAO created
+2016-10-15 12:49:58 INFO  GroupDaoImpl:24 - User try to create group
+2016-10-15 12:49:58 INFO  GroupDaoImpl:29 - Transaction began
+2016-10-15 12:49:58 INFO  GroupDaoImpl:31 - Group persisted
+2016-10-15 12:49:58 INFO  GroupDaoImpl:33 - Transaction commited
+2016-10-15 12:49:58 INFO  GroupDaoImpl:41 - Manager closed
+2016-10-15 12:49:58 INFO  GroupDaoImpl:47 - User try to delete group
+2016-10-15 12:49:58 INFO  GroupDaoImpl:52 - Transaction began
+2016-10-15 12:49:58 ERROR GroupDaoImpl:58 - Operation failed
+2016-10-15 12:49:58 INFO  GroupDaoImpl:60 - Transaction rolled back
+2016-10-15 12:49:58 INFO  GroupDaoImpl:64 - Manager closed
+2016-10-15 13:10:07 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 13:10:07 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 13:10:07 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 13:10:07 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 13:10:07 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 13:10:07 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 13:10:07 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 13:10:07 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 13:10:07 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 13:10:07 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 13:10:07 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 13:10:07 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 13:10:07 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 13:10:07 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 13:10:52 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 13:10:52 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 13:10:52 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 13:10:52 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 13:10:52 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 13:10:52 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 13:10:52 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 13:10:52 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 13:10:52 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 13:10:53 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 13:10:53 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 13:10:53 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 13:10:53 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 13:10:53 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 13:11:00 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 13:11:00 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 13:11:00 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 13:11:00 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 13:11:00 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 13:11:00 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 13:11:00 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 13:11:00 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 13:11:00 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 13:11:01 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 13:11:01 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 13:11:01 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 13:11:01 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 13:11:01 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 13:13:50 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 13:13:50 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 13:13:50 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 13:13:50 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 13:13:51 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 13:13:51 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 13:13:51 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 13:13:51 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 13:13:51 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 13:13:51 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 13:13:51 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 13:13:51 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 13:13:51 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 13:13:51 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 13:22:50 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 13:22:50 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 13:22:50 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 13:22:50 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 13:22:50 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 13:22:50 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 13:22:50 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 13:22:50 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 13:22:50 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 13:22:50 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 13:22:50 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 13:22:50 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 13:22:51 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 13:22:51 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 15:28:25 INFO  GroupDaoImpl:19 - Group DAO created
+2016-10-15 15:28:25 INFO  GroupDaoImpl:23 - User try to create group
+2016-10-15 15:28:25 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 15:28:25 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 15:28:25 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 15:28:25 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 15:28:26 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 15:28:26 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 15:28:26 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 15:28:26 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 15:28:26 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 15:28:26 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 15:28:26 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 15:28:26 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 15:28:26 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 15:28:26 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 15:28:26 INFO  GroupDaoImpl:28 - Transaction began
+2016-10-15 15:28:26 INFO  GroupDaoImpl:30 - Group persisted
+2016-10-15 15:28:26 INFO  GroupDaoImpl:32 - Transaction commited
+2016-10-15 15:28:26 INFO  GroupDaoImpl:40 - Manager closed
+2016-10-15 15:28:26 INFO  GroupDaoImpl:46 - User try to delete group
+2016-10-15 15:28:26 INFO  GroupDaoImpl:51 - Transaction began
+2016-10-15 15:28:26 ERROR GroupDaoImpl:57 - Operation failed
+2016-10-15 15:28:26 INFO  GroupDaoImpl:59 - Transaction rolled back
+2016-10-15 15:28:26 INFO  GroupDaoImpl:63 - Manager closed
+2016-10-15 15:30:13 INFO  GroupDaoImpl:19 - Group DAO created
+2016-10-15 15:30:13 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 15:30:13 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 15:30:13 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 15:30:13 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 15:30:13 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 15:30:13 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 15:30:13 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 15:30:13 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 15:30:13 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 15:30:14 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 15:30:14 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 15:30:14 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 15:30:14 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 15:30:14 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 15:30:14 INFO  GroupDaoImpl:46 - User try to delete group
+2016-10-15 15:30:14 INFO  GroupDaoImpl:51 - Transaction began
+2016-10-15 15:30:14 ERROR GroupDaoImpl:57 - Operation failed
+2016-10-15 15:30:14 INFO  GroupDaoImpl:59 - Transaction rolled back
+2016-10-15 15:30:14 INFO  GroupDaoImpl:63 - Manager closed
+2016-10-15 15:31:43 INFO  GroupDaoImpl:19 - Group DAO created
+2016-10-15 15:31:44 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 15:31:44 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 15:31:44 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 15:31:44 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 15:31:44 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 15:31:44 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 15:31:44 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 15:31:44 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 15:31:44 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 15:31:44 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 15:31:44 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 15:31:44 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 15:31:44 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 15:31:44 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 15:31:44 INFO  GroupDaoImpl:46 - User try to delete group
+2016-10-15 15:31:44 INFO  GroupDaoImpl:52 - Transaction began
+2016-10-15 15:31:44 INFO  GroupDaoImpl:54 - Group removed
+2016-10-15 15:31:44 INFO  GroupDaoImpl:56 - Transaction commited
+2016-10-15 15:31:44 INFO  GroupDaoImpl:64 - Manager closed
+2016-10-15 15:49:32 INFO  GroupDaoImpl:20 - Group DAO created
+2016-10-15 15:49:32 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 15:49:32 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 15:49:32 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 15:49:32 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 15:49:33 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 15:49:33 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 15:49:33 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 15:49:33 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 15:49:33 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 15:49:33 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 15:49:33 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 15:49:33 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 15:49:33 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 15:49:33 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 15:50:27 INFO  GroupDaoImpl:20 - Group DAO created
+2016-10-15 15:50:27 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 15:50:27 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 15:50:27 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 15:50:27 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 15:50:28 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 15:50:28 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 15:50:28 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 15:50:28 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 15:50:28 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 15:50:28 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 15:50:28 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 15:50:28 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 15:50:28 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 15:50:28 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 15:55:23 INFO  GroupDaoImpl:20 - Group DAO created
+2016-10-15 15:55:23 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 15:55:23 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 15:55:23 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 15:55:23 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 15:55:24 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 15:55:24 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 15:55:24 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 15:55:24 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 15:55:24 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 15:55:24 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 15:55:24 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 15:55:24 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 15:55:24 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 15:55:24 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 16:08:08 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 16:08:08 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 16:08:08 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 16:08:08 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 16:08:08 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 16:08:08 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 16:08:08 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 16:08:08 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 16:08:08 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 16:08:09 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 16:08:09 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 16:08:09 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 16:08:09 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 16:08:09 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Teacher (class must be instantiated by Interceptor)
+2016-10-15 16:08:47 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 16:08:47 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 16:08:47 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 16:08:47 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 16:08:48 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 16:08:48 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 16:08:48 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 16:08:48 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 16:08:48 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 16:08:48 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 16:08:48 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 16:08:48 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 16:08:48 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 16:17:11 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 16:17:11 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 16:17:11 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 16:17:11 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 16:17:11 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 16:17:11 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 16:17:11 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 16:17:11 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 16:17:11 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 16:17:12 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 16:17:12 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 16:17:12 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 16:17:12 INFO  PojoInstantiator:85 - HHH000182: No default (no-argument) constructor for class: entity.Subject (class must be instantiated by Interceptor)
+2016-10-15 16:53:45 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 16:53:45 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 16:53:45 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 16:53:45 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 16:53:45 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 16:53:45 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 16:53:45 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 16:53:45 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 16:53:45 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 16:53:45 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 16:53:45 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 16:53:45 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 16:55:52 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 16:55:52 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 16:55:52 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 16:55:52 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 16:55:53 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 16:55:53 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 16:55:53 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 16:55:53 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 16:55:53 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 16:55:53 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 16:55:53 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 16:55:53 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 17:40:47 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 17:40:47 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 17:40:47 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 17:40:47 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 17:40:47 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 17:40:47 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 17:40:47 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 17:40:47 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 17:40:47 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 17:40:47 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 17:40:47 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 17:40:47 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 17:41:00 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 17:41:00 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 17:41:00 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 17:41:00 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 17:41:00 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 17:41:00 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 17:41:00 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 17:41:00 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 17:41:00 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 17:41:01 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 17:41:01 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 17:41:01 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 17:41:59 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 17:41:59 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 17:41:59 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 17:41:59 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 17:41:59 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 17:41:59 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 17:41:59 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 17:41:59 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 17:41:59 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 17:41:59 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 17:41:59 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 17:41:59 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 17:49:10 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 17:49:10 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 17:49:10 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 17:49:10 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 17:49:10 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 17:49:10 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 17:49:10 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 17:49:11 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 17:49:11 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 17:49:11 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 17:49:11 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 17:49:11 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 17:49:11 INFO  GroupDaoImpl:25 - Group DAO created
+2016-10-15 17:50:37 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 17:50:37 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 17:50:37 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 17:50:37 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 17:50:37 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 17:50:37 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 17:50:37 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 17:50:37 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 17:50:37 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 17:50:37 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 17:50:37 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 17:50:37 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 17:50:38 INFO  GroupDaoImpl:25 - Group DAO created
+2016-10-15 17:50:51 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 17:50:51 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 17:50:51 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 17:50:51 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 17:50:52 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 17:50:52 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 17:50:52 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 17:50:52 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 17:50:52 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 17:50:52 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 17:50:52 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 17:50:52 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 17:50:52 INFO  GroupDaoImpl:25 - Group DAO created
+2016-10-15 17:56:13 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-15 17:56:13 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-15 17:56:13 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-15 17:56:13 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-15 17:56:13 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-15 17:56:13 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-15 17:56:13 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-15 17:56:13 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-15 17:56:13 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-15 17:56:14 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-15 17:56:14 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-15 17:56:14 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-15 17:56:14 INFO  GroupDaoImpl:25 - Group DAO created
+2016-10-16 14:55:02 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-16 14:55:02 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-16 14:55:02 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-16 14:55:02 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-16 14:55:02 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-16 14:55:02 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-16 14:55:02 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-16 14:55:02 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-16 14:55:02 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-16 14:55:02 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-16 14:55:03 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-16 14:55:03 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-16 14:55:03 INFO  GroupDaoImpl:25 - Group DAO created
