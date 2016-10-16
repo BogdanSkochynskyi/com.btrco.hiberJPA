@@ -5999,3 +5999,665 @@ line 1:44: unexpected token: LIMIT
 2016-10-17 00:24:40 INFO  TeacherDaoImpl:58 - Teacher removed
 2016-10-17 00:24:41 WARN  SqlExceptionHelper:145 - SQL Error: 1146, SQLState: 42S02
 2016-10-17 00:24:41 ERROR SqlExceptionHelper:147 - Table 'acp14.subjects_groups' doesn't exist
+2016-10-17 00:28:17 ERROR TeacherDaoImpl:62 - Operation failed
+2016-10-17 00:31:54 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-17 00:31:54 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-17 00:31:54 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-17 00:31:54 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-17 00:31:54 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-17 00:31:54 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-17 00:31:54 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-17 00:31:54 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-17 00:31:54 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-17 00:31:54 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-17 00:31:54 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-17 00:31:54 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-17 00:31:55 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:31:55 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:31:55 INFO  SubjectDaoImpl:98 - Group Subject{id=1273, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:31:55 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 2
+2016-10-17 00:31:55 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:31:55 INFO  SubjectDaoImpl:98 - Group Subject{id=1274, name='Subject #11', description='Subject description #11'} found correct
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=466, name='Teacher name', experience=5} found correct
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:31:55 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:31:59 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-17 00:31:59 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-17 00:31:59 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-17 00:31:59 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-17 00:32:00 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-17 00:32:00 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-17 00:32:00 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-17 00:32:00 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-17 00:32:00 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-17 00:32:00 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-17 00:32:00 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-17 00:32:00 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-17 00:32:00 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:98 - Group Subject{id=1333, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 2
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:98 - Group Subject{id=1334, name='Subject #11', description='Subject description #11'} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=478, name='Teacher name', experience=5} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:98 - Group Subject{id=1333, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:121 - User try to find most experienced teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:124 - Teacher found correctly
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:113 - User try to find teachers from 0 row and with row amount 10
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=480, name='Teacher name', experience=5} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:98 - Group Subject{id=1333, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=481, name='Teacher name', experience=5} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:71 - User try to update teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:75 - Teacher found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:77 - Teacher data updated correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:80 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:82 - Teacher added to managed context
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:84 - Transaction commited
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=481, name='Updated teacher name', experience=5} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=481, name='Updated teacher name', experience=5} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:98 - Group Subject{id=1333, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:132 - User try to find less experienced teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:135 - Teacher found correctly
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:113 - User try to find teachers from 0 row and with row amount 10
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=482, name='Teacher name', experience=5} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:98 - Group Subject{id=1333, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=483, name='Teacher name', experience=5} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:102 - Teacher with id 483 not found
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:98 - Group Subject{id=1333, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=484, name='Teacher name', experience=5} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=484, name='Teacher name', experience=5} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:98 - Group Subject{id=1333, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:143 - User try to find more than 3 years experienced teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:147 - Teachers found correctly
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=485, name='Teacher name', experience=5} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:32:01 INFO  SubjectDaoImpl:98 - Group Subject{id=1333, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:113 - User try to find teachers from 0 row and with row amount 20
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=486, name='Teacher name', experience=5} found correct
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:32:01 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:32:43 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-17 00:32:43 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-17 00:32:43 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-17 00:32:43 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-17 00:32:44 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-17 00:32:44 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-17 00:32:44 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-17 00:32:44 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-17 00:32:44 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-17 00:32:44 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-17 00:32:44 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-17 00:32:44 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-17 00:32:45 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:32:45 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:32:45 INFO  SubjectDaoImpl:98 - Group Subject{id=1363, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:32:45 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:32:45 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:32:45 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:32:45 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:32:49 INFO  TeacherDaoImpl:113 - User try to find teachers from 0 row and with row amount 20
+2016-10-17 00:33:00 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:00 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=497, name='Teacher name', experience=5} found correct
+2016-10-17 00:33:00 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:33:00 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:33:00 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:33:00 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:33:00 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:33:05 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-17 00:33:05 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-17 00:33:05 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-17 00:33:05 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-17 00:33:06 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-17 00:33:06 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-17 00:33:06 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-17 00:33:06 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-17 00:33:06 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-17 00:33:06 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-17 00:33:06 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-17 00:33:06 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-17 00:33:07 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:33:07 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:07 INFO  SubjectDaoImpl:98 - Group Subject{id=1393, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:33:07 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:33:07 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:33:07 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:33:07 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:33:07 INFO  TeacherDaoImpl:113 - User try to find teachers from 0 row and with row amount 10
+2016-10-17 00:33:07 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:07 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=508, name='Teacher name', experience=5} found correct
+2016-10-17 00:33:07 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:33:07 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:33:07 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:33:07 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:33:07 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:33:15 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-17 00:33:15 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-17 00:33:15 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-17 00:33:15 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-17 00:33:16 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-17 00:33:16 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-17 00:33:16 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-17 00:33:16 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-17 00:33:16 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-17 00:33:16 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-17 00:33:16 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-17 00:33:16 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-17 00:33:16 INFO  GroupDaoImpl:29 - User try to create group
+2016-10-17 00:33:16 INFO  GroupDaoImpl:33 - Transaction began
+2016-10-17 00:33:16 INFO  GroupDaoImpl:35 - Group persisted
+2016-10-17 00:33:16 INFO  GroupDaoImpl:37 - Transaction commited
+2016-10-17 00:33:16 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:16 INFO  GroupDaoImpl:98 - Group Group{id=1386, name='ACP_01'} found correct
+2016-10-17 00:33:16 INFO  GroupDaoImpl:48 - User try to delete group
+2016-10-17 00:33:16 INFO  GroupDaoImpl:52 - Transaction began
+2016-10-17 00:33:16 INFO  GroupDaoImpl:54 - Add group into managed context
+2016-10-17 00:33:16 INFO  GroupDaoImpl:56 - Group removed
+2016-10-17 00:33:16 INFO  GroupDaoImpl:58 - Transaction commited
+2016-10-17 00:33:16 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:16 INFO  GroupDaoImpl:100 - Group with id 1386 not found
+2016-10-17 00:33:16 INFO  GroupDaoImpl:29 - User try to create group
+2016-10-17 00:33:16 INFO  GroupDaoImpl:33 - Transaction began
+2016-10-17 00:33:16 INFO  GroupDaoImpl:35 - Group persisted
+2016-10-17 00:33:16 INFO  GroupDaoImpl:37 - Transaction commited
+2016-10-17 00:33:16 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:16 INFO  GroupDaoImpl:98 - Group Group{id=1387, name='ACP_01'} found correct
+2016-10-17 00:33:16 INFO  GroupDaoImpl:69 - User try to update group
+2016-10-17 00:33:16 INFO  GroupDaoImpl:73 - Group found correct
+2016-10-17 00:33:16 INFO  GroupDaoImpl:75 - Group data updated correct
+2016-10-17 00:33:16 INFO  GroupDaoImpl:78 - Transaction began
+2016-10-17 00:33:16 INFO  GroupDaoImpl:80 - Group added to managed context
+2016-10-17 00:33:16 INFO  GroupDaoImpl:82 - Transaction commited
+2016-10-17 00:33:16 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:16 INFO  GroupDaoImpl:98 - Group Group{id=1387, name='ACP_02'} found correct
+2016-10-17 00:33:16 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:16 INFO  GroupDaoImpl:98 - Group Group{id=1387, name='ACP_02'} found correct
+2016-10-17 00:33:16 INFO  GroupDaoImpl:48 - User try to delete group
+2016-10-17 00:33:16 INFO  GroupDaoImpl:52 - Transaction began
+2016-10-17 00:33:16 INFO  GroupDaoImpl:54 - Add group into managed context
+2016-10-17 00:33:16 INFO  GroupDaoImpl:56 - Group removed
+2016-10-17 00:33:16 INFO  GroupDaoImpl:58 - Transaction commited
+2016-10-17 00:33:16 INFO  GroupDaoImpl:29 - User try to create group
+2016-10-17 00:33:16 INFO  GroupDaoImpl:33 - Transaction began
+2016-10-17 00:33:16 INFO  GroupDaoImpl:35 - Group persisted
+2016-10-17 00:33:16 INFO  GroupDaoImpl:37 - Transaction commited
+2016-10-17 00:33:16 INFO  GroupDaoImpl:29 - User try to create group
+2016-10-17 00:33:16 INFO  GroupDaoImpl:33 - Transaction began
+2016-10-17 00:33:16 INFO  GroupDaoImpl:35 - Group persisted
+2016-10-17 00:33:16 INFO  GroupDaoImpl:37 - Transaction commited
+2016-10-17 00:33:16 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:16 INFO  GroupDaoImpl:98 - Group Group{id=1388, name='ACP_01'} found correct
+2016-10-17 00:33:16 INFO  GroupDaoImpl:48 - User try to delete group
+2016-10-17 00:33:16 INFO  GroupDaoImpl:52 - Transaction began
+2016-10-17 00:33:16 INFO  GroupDaoImpl:54 - Add group into managed context
+2016-10-17 00:33:16 INFO  GroupDaoImpl:56 - Group removed
+2016-10-17 00:33:16 INFO  GroupDaoImpl:58 - Transaction commited
+2016-10-17 00:33:16 INFO  GroupDaoImpl:29 - User try to create group
+2016-10-17 00:33:16 INFO  GroupDaoImpl:33 - Transaction began
+2016-10-17 00:33:16 INFO  GroupDaoImpl:35 - Group persisted
+2016-10-17 00:33:16 INFO  GroupDaoImpl:37 - Transaction commited
+2016-10-17 00:33:16 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:16 INFO  GroupDaoImpl:98 - Group Group{id=1390, name='ACP_01'} found correct
+2016-10-17 00:33:16 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:16 INFO  GroupDaoImpl:98 - Group Group{id=1390, name='ACP_01'} found correct
+2016-10-17 00:33:16 INFO  GroupDaoImpl:48 - User try to delete group
+2016-10-17 00:33:16 INFO  GroupDaoImpl:52 - Transaction began
+2016-10-17 00:33:16 INFO  GroupDaoImpl:54 - Add group into managed context
+2016-10-17 00:33:16 INFO  GroupDaoImpl:56 - Group removed
+2016-10-17 00:33:16 INFO  GroupDaoImpl:58 - Transaction commited
+2016-10-17 00:33:16 INFO  GroupDaoImpl:29 - User try to create group
+2016-10-17 00:33:16 INFO  GroupDaoImpl:33 - Transaction began
+2016-10-17 00:33:16 INFO  GroupDaoImpl:35 - Group persisted
+2016-10-17 00:33:16 INFO  GroupDaoImpl:37 - Transaction commited
+2016-10-17 00:33:16 INFO  GroupDaoImpl:111 - User try to find groups from 0 row and with row amount 20
+2016-10-17 00:33:17 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:17 INFO  GroupDaoImpl:98 - Group Group{id=1391, name='ACP_01'} found correct
+2016-10-17 00:33:17 INFO  GroupDaoImpl:48 - User try to delete group
+2016-10-17 00:33:17 INFO  GroupDaoImpl:52 - Transaction began
+2016-10-17 00:33:17 INFO  GroupDaoImpl:54 - Add group into managed context
+2016-10-17 00:33:17 INFO  GroupDaoImpl:56 - Group removed
+2016-10-17 00:33:17 INFO  GroupDaoImpl:58 - Transaction commited
+2016-10-17 00:33:17 INFO  GroupDaoImpl:111 - User try to find groups from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:17 INFO  GroupDaoImpl:98 - Group Group{id=1392, name='Group #01'} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:32 - User try to create student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:36 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:38 - Student persisted
+2016-10-17 00:33:17 INFO  StudentDaoImpl:40 - Transaction commited
+2016-10-17 00:33:17 INFO  GroupDaoImpl:111 - User try to find groups from 0 row and with row amount 2
+2016-10-17 00:33:17 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:17 INFO  GroupDaoImpl:98 - Group Group{id=1393, name='Group #11'} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:32 - User try to create student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:36 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:38 - Student persisted
+2016-10-17 00:33:17 INFO  StudentDaoImpl:40 - Transaction commited
+2016-10-17 00:33:17 INFO  StudentDaoImpl:95 - User try to find student by id
+2016-10-17 00:33:17 INFO  StudentDaoImpl:100 - Student Student{id=4922, name='Student name', group=Group{id=1392, name='Group #01'}} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:51 - User try to delete student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:55 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:57 - Add student into managed context
+2016-10-17 00:33:17 INFO  StudentDaoImpl:59 - Student removed
+2016-10-17 00:33:17 INFO  GroupDaoImpl:111 - User try to find groups from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:17 INFO  GroupDaoImpl:98 - Group Group{id=1392, name='Group #01'} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:32 - User try to create student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:36 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:38 - Student persisted
+2016-10-17 00:33:17 INFO  StudentDaoImpl:40 - Transaction commited
+2016-10-17 00:33:17 INFO  StudentDaoImpl:95 - User try to find student by id
+2016-10-17 00:33:17 INFO  StudentDaoImpl:100 - Student Student{id=4924, name='Student name', group=Group{id=1392, name='Group #01'}} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:71 - User try to update student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:75 - Student found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:77 - Group data updated correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:80 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:82 - Student added to managed context
+2016-10-17 00:33:17 INFO  StudentDaoImpl:84 - Transaction commited
+2016-10-17 00:33:17 INFO  StudentDaoImpl:95 - User try to find student by id
+2016-10-17 00:33:17 INFO  StudentDaoImpl:100 - Student Student{id=4924, name='Dima', group=Group{id=1392, name='Group #01'}} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:95 - User try to find student by id
+2016-10-17 00:33:17 INFO  StudentDaoImpl:100 - Student Student{id=4924, name='Dima', group=Group{id=1392, name='Group #01'}} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:51 - User try to delete student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:55 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:57 - Add student into managed context
+2016-10-17 00:33:17 INFO  StudentDaoImpl:59 - Student removed
+2016-10-17 00:33:17 INFO  GroupDaoImpl:111 - User try to find groups from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:17 INFO  GroupDaoImpl:98 - Group Group{id=1392, name='Group #01'} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:32 - User try to create student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:36 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:38 - Student persisted
+2016-10-17 00:33:17 INFO  StudentDaoImpl:40 - Transaction commited
+2016-10-17 00:33:17 INFO  StudentDaoImpl:95 - User try to find student by id
+2016-10-17 00:33:17 INFO  StudentDaoImpl:100 - Student Student{id=4925, name='Student name', group=Group{id=1392, name='Group #01'}} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:51 - User try to delete student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:55 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:57 - Add student into managed context
+2016-10-17 00:33:17 INFO  StudentDaoImpl:59 - Student removed
+2016-10-17 00:33:17 INFO  StudentDaoImpl:95 - User try to find student by id
+2016-10-17 00:33:17 INFO  StudentDaoImpl:102 - Student with id 4925 not found
+2016-10-17 00:33:17 INFO  GroupDaoImpl:111 - User try to find groups from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:17 INFO  GroupDaoImpl:98 - Group Group{id=1392, name='Group #01'} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:32 - User try to create student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:36 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:38 - Student persisted
+2016-10-17 00:33:17 INFO  StudentDaoImpl:40 - Transaction commited
+2016-10-17 00:33:17 INFO  StudentDaoImpl:95 - User try to find student by id
+2016-10-17 00:33:17 INFO  StudentDaoImpl:100 - Student Student{id=4926, name='Student name', group=Group{id=1392, name='Group #01'}} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:95 - User try to find student by id
+2016-10-17 00:33:17 INFO  StudentDaoImpl:100 - Student Student{id=4926, name='Student name', group=Group{id=1392, name='Group #01'}} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:51 - User try to delete student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:55 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:57 - Add student into managed context
+2016-10-17 00:33:17 INFO  StudentDaoImpl:59 - Student removed
+2016-10-17 00:33:17 INFO  GroupDaoImpl:111 - User try to find groups from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:17 INFO  GroupDaoImpl:98 - Group Group{id=1392, name='Group #01'} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:32 - User try to create student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:36 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:38 - Student persisted
+2016-10-17 00:33:17 INFO  StudentDaoImpl:40 - Transaction commited
+2016-10-17 00:33:17 INFO  StudentDaoImpl:113 - User try to find students from 0 row and with row amount 20
+2016-10-17 00:33:17 INFO  StudentDaoImpl:95 - User try to find student by id
+2016-10-17 00:33:17 INFO  StudentDaoImpl:100 - Student Student{id=4927, name='Student name', group=Group{id=1392, name='Group #01'}} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:51 - User try to delete student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:55 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:57 - Add student into managed context
+2016-10-17 00:33:17 INFO  StudentDaoImpl:59 - Student removed
+2016-10-17 00:33:17 INFO  GroupDaoImpl:111 - User try to find groups from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:17 INFO  GroupDaoImpl:98 - Group Group{id=1392, name='Group #01'} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:32 - User try to create student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:36 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:38 - Student persisted
+2016-10-17 00:33:17 INFO  StudentDaoImpl:40 - Transaction commited
+2016-10-17 00:33:17 INFO  GroupDaoImpl:111 - User try to find groups from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  GroupDaoImpl:93 - User try to find group by id
+2016-10-17 00:33:17 INFO  GroupDaoImpl:98 - Group Group{id=1392, name='Group #01'} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:121 - User try to get list of students by group
+2016-10-17 00:33:17 INFO  StudentDaoImpl:125 - Students found correctly
+2016-10-17 00:33:17 INFO  StudentDaoImpl:95 - User try to find student by id
+2016-10-17 00:33:17 INFO  StudentDaoImpl:100 - Student Student{id=4928, name='Student name', group=Group{id=1392, name='Group #01'}} found correct
+2016-10-17 00:33:17 INFO  StudentDaoImpl:51 - User try to delete student
+2016-10-17 00:33:17 INFO  StudentDaoImpl:55 - Transaction began
+2016-10-17 00:33:17 INFO  StudentDaoImpl:57 - Add student into managed context
+2016-10-17 00:33:17 INFO  StudentDaoImpl:59 - Student removed
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:29 - User try to create subject
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:33 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:35 - Subject persisted
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:37 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:29 - User try to create subject
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:33 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:35 - Subject persisted
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:37 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1513, name='Subject name', description='Subject description'} found correct
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:48 - User try to delete group
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:52 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:54 - Add subject into managed context
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:56 - Group removed
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:58 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:29 - User try to create subject
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:33 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:35 - Subject persisted
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:37 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1515, name='Subject name', description='Subject description'} found correct
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:69 - User try to update subject
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:73 - Subject found correct
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:75 - Subject data updated correct
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:78 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:80 - Subject added to managed context
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:82 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1515, name='Updated subject', description='Subject description'} found correct
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1515, name='Updated subject', description='Subject description'} found correct
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:48 - User try to delete group
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:52 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:54 - Add subject into managed context
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:56 - Group removed
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:58 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:29 - User try to create subject
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:33 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:35 - Subject persisted
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:37 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1516, name='Subject name', description='Subject description'} found correct
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:48 - User try to delete group
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:52 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:54 - Add subject into managed context
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:56 - Group removed
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:58 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:100 - Group with id 1516 not found
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:29 - User try to create subject
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:33 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:35 - Subject persisted
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:37 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1517, name='Subject name', description='Subject description'} found correct
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1517, name='Subject name', description='Subject description'} found correct
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:48 - User try to delete group
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:52 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:54 - Add subject into managed context
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:56 - Group removed
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:58 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:29 - User try to create subject
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:33 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:35 - Subject persisted
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:37 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 20
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1518, name='Subject name', description='Subject description'} found correct
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:48 - User try to delete group
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:52 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:54 - Add subject into managed context
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:56 - Group removed
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:58 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:29 - User try to create subject
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:33 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:35 - Subject persisted
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:37 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:120 - User try to find only gumanitarium subjects
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:123 - Gumanitarium subjects are found correctly
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1519, name='Subject name', description='Subject description'} found correct
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:48 - User try to delete group
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:52 - Transaction began
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:54 - Add subject into managed context
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:56 - Group removed
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:58 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1520, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 2
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1521, name='Subject #11', description='Subject description #11'} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=549, name='Teacher name', experience=5} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1520, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:121 - User try to find most experienced teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:124 - Teacher found correctly
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:113 - User try to find teachers from 0 row and with row amount 10
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=551, name='Teacher name', experience=5} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1520, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=552, name='Teacher name', experience=5} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:71 - User try to update teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:75 - Teacher found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:77 - Teacher data updated correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:80 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:82 - Teacher added to managed context
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:84 - Transaction commited
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=552, name='Updated teacher name', experience=5} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=552, name='Updated teacher name', experience=5} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1520, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:132 - User try to find less experienced teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:135 - Teacher found correctly
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:113 - User try to find teachers from 0 row and with row amount 10
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=553, name='Teacher name', experience=5} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1520, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=554, name='Teacher name', experience=5} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:102 - Teacher with id 554 not found
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1520, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=555, name='Teacher name', experience=5} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=555, name='Teacher name', experience=5} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1520, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:143 - User try to find more than 3 years experienced teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:147 - Teachers found correctly
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=556, name='Teacher name', experience=5} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:111 - User try to find subjects from 0 row and with row amount 1
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:93 - User try to find subject by id
+2016-10-17 00:33:17 INFO  SubjectDaoImpl:98 - Group Subject{id=1520, name='Subject #01', description='Subject description #01'} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:31 - User try to create teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:35 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:37 - Teacher persisted
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:39 - Transaction commited
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:113 - User try to find teachers from 0 row and with row amount 10
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:95 - User try to find teacher by id
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:100 - Teacher Teacher{id=557, name='Teacher name', experience=5} found correct
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:50 - User try to delete teacher
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:54 - Transaction began
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:56 - Add teacher into managed context
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:58 - Teacher removed
+2016-10-17 00:33:17 INFO  TeacherDaoImpl:60 - Transaction commited

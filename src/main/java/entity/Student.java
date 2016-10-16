@@ -13,7 +13,7 @@ public class Student {
 	@Column(name = "name", length = 45)
 	private String name;
 
-	@ManyToOne(cascade = CascadeType.ALL)//если этот объект переводится в какое то состояние,
+	@ManyToOne(cascade = CascadeType.PERSIST)//если этот объект переводится в какое то состояние,
 	// то и его поля если они объекты наши - тоже будут переведены в это состояние  //EMBEDED field(id -клас в котором может быть больше 1 поля)
 	// uniqueConstraint={@UniqueConstraint(columnNames={"city", "street"})}
 	@JoinColumn(name = "group_id", referencedColumnName = "id")

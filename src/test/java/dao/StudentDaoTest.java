@@ -2,7 +2,6 @@ package dao;
 
 import dao.impl.mysql.IGroupDao;
 import dao.impl.mysql.IStudentDao;
-import dao.impl.mysql.ServiceFactory;
 import entity.Group;
 import entity.Student;
 import org.junit.*;

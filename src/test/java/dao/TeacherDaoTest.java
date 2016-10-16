@@ -92,7 +92,7 @@ public class TeacherDaoTest {
 	@Test
 	public void testGetAll() {
 		int firstRow = 0;
-		int rowAmount = 20;
+		int rowAmount = 10;
 		List<Teacher> students = teacherCrudDao.getAll(firstRow, rowAmount);
 		Assert.assertTrue(students.size() == rowAmount);
 	}

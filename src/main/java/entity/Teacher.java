@@ -16,7 +16,7 @@ public class Teacher {
 	@Column(name = "experience")
 	private int experience;
 
-	@ManyToOne(cascade =  CascadeType.ALL)
+	@ManyToOne(cascade =  CascadeType.PERSIST)
 	@JoinColumn(name = "subject_id", referencedColumnName = "id")
 	private Subject subject;
 
