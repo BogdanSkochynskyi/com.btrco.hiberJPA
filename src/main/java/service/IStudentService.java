@@ -10,6 +10,8 @@ public interface IStudentService {
 
 	List<Student> getListOfStudents();
 
+	List<Student> getListOfStudents(int firstRow, int rowAmount);
+
 	Student addStudent(Student student);
 
 	boolean updateStudent(Student student);

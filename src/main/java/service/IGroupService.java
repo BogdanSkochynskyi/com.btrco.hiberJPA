@@ -9,6 +9,8 @@ public interface IGroupService {
 
 	List<Group> getListOfGroup();
 
+	List<Group> getListOfGroup(int firstRow, int rowAmount);
+
 	Group addGroup(Group group);
 
 	boolean updateGroup(Group group);
