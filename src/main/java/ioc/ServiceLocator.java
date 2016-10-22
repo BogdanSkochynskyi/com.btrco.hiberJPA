@@ -1,7 +1,7 @@
 package ioc;
 
-import dao.GroupDaoImpl;
-import dao.impl.mysql.IGroupDao;
+import dao.implementation.mySQL.GroupDaoImpl;
+import dao.IGroupDao;
 import service.implementation.GroupServiceImpl;
 
 import javax.persistence.Persistence;

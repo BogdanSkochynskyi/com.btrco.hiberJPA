@@ -1,9 +1,12 @@
 package service.implementation;
 
-import dao.impl.mysql.IStudentDao;
+import dao.IStudentDao;
 import entity.Group;
 import entity.Student;
 import entity.Subject;
+import exceptions.EntityExistsException;
+import exceptions.EntityNotFoundException;
+import exceptions.RowsAmountException;
 import service.IStudentService;
 import utils.Utils;
 
@@ -18,31 +21,31 @@ public class StudentServiceImpl implements IStudentService {
 	}
 
 	@Override
-	public List<Student> getListOfStudents() {
+	public List<Student> getListOfStudents() throws RowsAmountException, EntityNotFoundException {
 		List<Student> students = getListOfStudents(Utils.BASIC_FIRST_ROW, Utils.BASIC_ROW_AMOUNT);
 		return students;
 	}
 
 	@Override
-	public List<Student> getListOfStudents(int firstRow, int rowAmount) {
+	public List<Student> getListOfStudents(int firstRow, int rowAmount) throws RowsAmountException, EntityNotFoundException {
 		List<Student> students = studentDao.getAll(firstRow, rowAmount);
 		return students;
 	}
 
 	@Override
-	public Student addStudent(Student student) {
+	public Student addStudent(Student student) throws EntityExistsException {
 		Student created = studentDao.create(student);
 		return created;
 	}
 
 	@Override
-	public boolean updateStudent(Student student) {
+	public boolean updateStudent(Student student) throws EntityNotFoundException {
 		boolean isStudentUpdated = studentDao.update(student);
 		return isStudentUpdated;
 	}
 
 	@Override
-	public List<Student> getStudentsByGroup(Group group) {
+	public List<Student> getStudentsByGroup(Group group) throws EntityNotFoundException {
 		List<Student> studentsInGroup = studentDao.getListOfStudentsInGroup(group);
 		return studentsInGroup;
 	}

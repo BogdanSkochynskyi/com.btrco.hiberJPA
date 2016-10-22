@@ -1,9 +1,13 @@
 package dao;
 
-import dao.impl.mysql.IGroupDao;
-import dao.impl.mysql.IStudentDao;
+import dao.implementation.mySQL.GroupDaoImpl;
+import dao.implementation.mySQL.StudentDaoImpl;
 import entity.Group;
 import entity.Student;
+import exceptions.EntityExistsException;
+import exceptions.EntityNotFoundException;
+import exceptions.InvalidIdException;
+import exceptions.RowsAmountException;
 import org.junit.*;
 import utils.HibernateUtils;
 import utils.TestUtils;
@@ -37,7 +41,7 @@ public class StudentDaoTest {
 	}
 
 	@Before
-	public void initDataInDB() {
+	public void initDataInDB() throws RowsAmountException, EntityNotFoundException, InvalidIdException, EntityExistsException {
 		Group group = groupCrudDao.findById(groupCrudDao.getAll(0,1).get(0).getId());
 		this.student = new Student("Student name", group);
 		studentCrudDao.create(this.student);
@@ -45,13 +49,15 @@ public class StudentDaoTest {
 
 	@After
 	public void removeDataFromDB() {
-		if (studentCrudDao.findById(this.student.getId()) != null) {
+		try {
 			studentCrudDao.delete(this.student);
+		} catch (EntityNotFoundException e) {
+			e.printStackTrace();
 		}
 	}
 
 	@Test
-	public void testCreateStudent() {
+	public void testCreateStudent() throws RowsAmountException, EntityNotFoundException, InvalidIdException, EntityExistsException {
 		Group group = groupCrudDao.findById(groupCrudDao.getAll(0,2).get(1).getId());
 
 		Student actualStudent = studentCrudDao.create(new Student("Bogdan", group));
@@ -60,7 +66,7 @@ public class StudentDaoTest {
 	}
 
 	@Test
-	public void testDeleteStudent() {
+	public void testDeleteStudent() throws InvalidIdException, EntityNotFoundException {
 		Student actualStudent = studentCrudDao.findById(this.student.getId());
 		boolean actualResult = studentCrudDao.delete(actualStudent);
 
@@ -68,7 +74,7 @@ public class StudentDaoTest {
 	}
 
 	@Test
-	public void testUpdateStudent() {
+	public void testUpdateStudent() throws InvalidIdException, EntityNotFoundException {
 		Student expectedResult = studentCrudDao.findById(this.student.getId());
 		expectedResult.setName("Dima");
 
@@ -79,14 +85,14 @@ public class StudentDaoTest {
 	}
 
 	@Test
-	public void testFindById() {
+	public void testFindById() throws InvalidIdException, EntityNotFoundException {
 		Student actualGroup = studentCrudDao.findById(this.student.getId());
 
 		Assert.assertEquals(this.student, actualGroup);
 	}
 
 	@Test
-	public void testGetAll() {
+	public void testGetAll() throws RowsAmountException, EntityNotFoundException {
 		int firstRow = 0;
 		int rowAmount = 20;
 		List<Student> students = studentCrudDao.getAll(firstRow, rowAmount);
@@ -94,7 +100,7 @@ public class StudentDaoTest {
 	}
 
 	@Test
-	public void testGetListOfStudentsInGroup() {
+	public void testGetListOfStudentsInGroup() throws RowsAmountException, EntityNotFoundException, InvalidIdException {
 		Group group = groupCrudDao.findById(groupCrudDao.getAll(0,1).get(0).getId());
 
 		List<Student> studentList = studentCrudDao.getListOfStudentsInGroup(group);

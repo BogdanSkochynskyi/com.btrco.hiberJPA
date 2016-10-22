@@ -1,12 +1,17 @@
 package utils;
 
+import dao.implementation.mySQL.GroupDaoImpl;
 import entity.Group;
 import entity.Student;
 import entity.Subject;
 import entity.Teacher;
+import exceptions.EntityNotFoundException;
+import exceptions.RowsAmountException;
+import service.implementation.GroupServiceImpl;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import java.util.List;
 import java.util.Random;
 
 public class TestUtils {
@@ -22,7 +27,11 @@ public class TestUtils {
 	public static void addDataIntoDB() {
 		manager = HibernateUtils.getEntityManager();
 		addDataIntoGroupsTable();
-		addDataIntoStudentsTable();
+		try {
+			addDataIntoStudentsTable();
+		} catch (RowsAmountException | EntityNotFoundException e) {
+			e.printStackTrace();
+		}
 		addDataIntoSubjectsTable();
 		addDataIntoTeacherTable();
 		manager.close();
@@ -43,12 +52,17 @@ public class TestUtils {
 	/**
 	 * Add test data into students table
 	 */
-	private static void addDataIntoStudentsTable(){
+	private static void addDataIntoStudentsTable() throws RowsAmountException, EntityNotFoundException {
 		EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-		int id = 1;
+		GroupServiceImpl service = new GroupServiceImpl(new GroupDaoImpl());
+		List<Group> groups = service.getListOfGroup(0, 20);
+		int counter = 0;
 		for (int i = 0; i < 100; i++) {
-			manager.persist(new Student("Student #" + i+1, manager.find(Group.class, id >= 20 ? id=1 : id++)));
+			manager.persist(new Student("Student #" + i+1, manager.find(Group.class, groups.get(counter++).getId())));
+			if (counter >= 19) {
+				counter = 0;
+			}
 		}
 		transaction.commit();
 	}

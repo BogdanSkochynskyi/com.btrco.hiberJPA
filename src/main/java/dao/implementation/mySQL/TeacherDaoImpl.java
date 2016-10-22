@@ -1,7 +1,12 @@
-package dao;
+package dao.implementation.mySQL;
 
-import dao.impl.mysql.ITeacherDao;
+import dao.ITeacherDao;
+import entity.Subject;
 import entity.Teacher;
+import exceptions.EntityExistsException;
+import exceptions.EntityNotFoundException;
+import exceptions.InvalidIdException;
+import exceptions.InvalidNumberException;
 import org.apache.log4j.Logger;
 import utils.HibernateUtils;
 import utils.Utils;
@@ -27,128 +32,146 @@ public class TeacherDaoImpl implements ITeacherDao {
 		this.entityManager = entityManager;
 	}
 
-	public Teacher create(Teacher teacher) {
-		LOG.info("User try to create teacher");
+	public Teacher create(Teacher teacher) throws EntityExistsException {
+		LOG.trace("User try to create teacher");
+
+		if (entityManager.find(Teacher.class, teacher.getId()) != null) {
+			throw new EntityExistsException(teacher.toString());
+		}
+
 		EntityTransaction transaction = entityManager.getTransaction();
 		try{
 			transaction.begin();
-			LOG.info("Transaction began");
+			LOG.trace("Transaction began");
 			entityManager.persist(teacher);
-			LOG.info("Teacher persisted");
+			LOG.trace("Teacher persisted");
 			transaction.commit();
-			LOG.info("Transaction commited");
+			LOG.trace("Transaction commited");
 		} catch (Exception e) {
 			LOG.error("Operation failed");
 			transaction.rollback();
-			LOG.info("Transaction rolled back");
+			LOG.trace("Transaction rolled back");
 			return null;
 		}
 		return teacher;
 	}
 
-	public boolean delete(Teacher teacher) {
-		LOG.info("User try to delete teacher");
+	public boolean delete(Teacher teacher) throws EntityNotFoundException {
+		LOG.trace("User try to delete teacher");
+
+		if (entityManager.find(Teacher.class, teacher.getId()) == null) {
+			throw new EntityNotFoundException(teacher.toString());
+		}
+
 		EntityTransaction transaction = entityManager.getTransaction();
 		try {
 			transaction.begin();
-			LOG.info("Transaction began");
+			LOG.trace("Transaction began");
 			teacher = entityManager.find(Teacher.class, teacher.getId());
-			LOG.info("Add teacher into managed context");
+			LOG.trace("Add teacher into managed context");
 			entityManager.remove(teacher);
-			LOG.info("Teacher removed");
+			LOG.trace("Teacher removed");
 			transaction.commit();
-			LOG.info("Transaction commited");
+			LOG.trace("Transaction commited");
 		} catch (Exception e) {
 			LOG.error("Operation failed");
 			transaction.rollback();
-			LOG.info("Transaction rolled back");
+			LOG.trace("Transaction rolled back");
 			return false;
 		}
 		return true;
 	}
 
-	public boolean update(Teacher teacher) {
-		LOG.info("User try to update teacher");
+	public boolean update(Teacher teacher) throws EntityNotFoundException {
+		LOG.trace("User try to update teacher");
 		EntityTransaction transaction = entityManager.getTransaction();
 
 		Teacher teacherFromDB = entityManager.find(Teacher.class, teacher.getId());
-		LOG.info("Teacher found correct");
+
+		if (teacherFromDB == null) {
+			throw new EntityNotFoundException(teacher.toString());
+		}
+
+		LOG.trace("Teacher found correct");
 		Utils.copyTeacher(teacher, teacherFromDB);
-		LOG.info("Teacher data updated correct");
+		LOG.trace("Teacher data updated correct");
 		try {
 			transaction.begin();
-			LOG.info("Transaction began");
+			LOG.trace("Transaction began");
 			entityManager.persist(teacherFromDB);
-			LOG.info("Teacher added to managed context");
+			LOG.trace("Teacher added to managed context");
 			transaction.commit();
-			LOG.info("Transaction commited");
+			LOG.trace("Transaction commited");
 		} catch (Exception e) {
 			LOG.error("Operation failed");
 			transaction.rollback();
-			LOG.info("Transaction rolled back");
+			LOG.trace("Transaction rolled back");
 			return false;
 		}
 		return true;
 	}
 
-	public Teacher findById(Object id) {
-		LOG.info("User try to find teacher by id");
-		try {
-			Teacher teacherFromDB = entityManager.find(Teacher.class, id);
-			if (teacherFromDB != null)
-			{
-				LOG.info("Teacher " + teacherFromDB + " found correct");
-			} else {
-				LOG.info("Teacher with id " + id + " not found");
-			}
-			return teacherFromDB;
-		} catch (Exception e) {
-			LOG.error("Operation failed");
-			return null;
+	public Teacher findById(Object id) throws InvalidIdException, EntityNotFoundException {
+		LOG.trace("User try to find teacher by id");
+
+		if (!(id instanceof Integer) || ((Integer)id < 0)) {
+			throw new InvalidIdException(id.toString());
 		}
+
+		Teacher teacherFromDB = entityManager.find(Teacher.class, id);
+		if (teacherFromDB == null) {
+			throw new EntityNotFoundException((Integer)id);
+		}
+
+		return teacherFromDB;
 	}
 
 	@Override
 	public List<Teacher> getAll(int firstRow, int rowsAmount) {
-		LOG.info("User try to find teachers from " + firstRow + " row and with row amount " + rowsAmount);
+		LOG.trace("User try to find teachers from " + firstRow + " row and with row amount " + rowsAmount);
 		return entityManager.createQuery(GET_ALL_STUDENTS)
 				.setFirstResult(firstRow)
 				.setMaxResults(rowsAmount)
 				.getResultList();
 	}
 
-	public Teacher getMostExperienceTeacher() {
-		LOG.info("User try to find most experienced teacher");
+	public Teacher getMostExperienceTeacher() throws EntityNotFoundException {
+		LOG.trace("User try to find most experienced teacher");
 		List<Teacher> teachers = entityManager.createQuery(GET_MOST_EXPERIENCED_TEACHER).getResultList();
 		if (teachers.size() != 0) {
-			LOG.info("Teacher found correctly");
+			LOG.trace("Teacher found correctly");
 			return teachers.get(0);
+		} else {
+			throw new EntityNotFoundException("Most experienced teacher ");
 		}
-		LOG.info("Teacher not found");
-		return null;
 	}
 
-	public Teacher getLessExperienceTeacher() {
-		LOG.info("User try to find less experienced teacher");
+	public Teacher getLessExperienceTeacher() throws EntityNotFoundException {
+		LOG.trace("User try to find less experienced teacher");
 		List<Teacher> teachers = entityManager.createQuery(GET_LESS_EXPERIENCED_TEACHER).getResultList();
 		if (teachers.size() != 0) {
-			LOG.info("Teacher found correctly");
+			LOG.trace("Teacher found correctly");
 			return teachers.get(0);
+		} else {
+			throw new EntityNotFoundException("Less experienced teacher ");
 		}
-		LOG.info("Teacher not found");
-		return null;
 	}
 
-	public List<Teacher> getTeachersWithMoreThanThreeYearsExperience(int experience) {
-		LOG.info("User try to find more than " + experience + " years experienced teacher");
+	public List<Teacher> getTeachersWithMoreThanYearsExperience(int experience) throws InvalidNumberException, EntityNotFoundException {
+		LOG.trace("User try to find more than " + experience + " years experienced teacher");
+
+		if (experience < 0) {
+			throw new InvalidNumberException(experience);
+		}
+
 		List<Teacher> teachers = entityManager.createQuery(GET_TEACHERS_THAT_HAVE_EXPERIENCE_MORE_THAN_YEARS)
 				.setParameter(EXPERIENCE, experience).getResultList();
 		if (teachers != null) {
-			LOG.info("Teachers found correctly");
+			LOG.trace("Teachers found correctly");
 			return teachers;
+		} else {
+			throw new EntityNotFoundException("Teacher with " + experience + " years experience ");
 		}
-		LOG.info("Teacher not found");
-		return null;
 	}
 
 	public void setEntityManager(EntityManager entityManager) {

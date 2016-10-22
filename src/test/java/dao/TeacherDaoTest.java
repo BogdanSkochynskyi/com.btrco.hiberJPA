@@ -1,9 +1,10 @@
 package dao;
 
-import dao.impl.mysql.ISubjectDao;
-import dao.impl.mysql.ITeacherDao;
+import dao.implementation.mySQL.SubjectDaoImpl;
+import dao.implementation.mySQL.TeacherDaoImpl;
 import entity.Subject;
 import entity.Teacher;
+import exceptions.*;
 import org.junit.*;
 import utils.HibernateUtils;
 import utils.TestUtils;
@@ -41,7 +42,7 @@ public class TeacherDaoTest {
 	}
 
 	@Before
-	public void initDataInDB() {
+	public void initDataInDB() throws RowsAmountException, EntityNotFoundException, InvalidIdException, EntityExistsException {
 		Subject subject = subjectCrudDao.findById(subjectCrudDao.getAll(0,1).get(0).getId());
 		this.teacher = new Teacher("Teacher name", 5, subject);
 		teacherCrudDao.create(this.teacher);
@@ -49,13 +50,15 @@ public class TeacherDaoTest {
 
 	@After
 	public void removeDataFromDB() {
-		if (teacherCrudDao.findById(this.teacher.getId()) != null) {
+		try {
 			teacherCrudDao.delete(this.teacher);
+		} catch (EntityNotFoundException e) {
+			e.printStackTrace();
 		}
 	}
 
 	@Test
-	public void testCreateStudent() {
+	public void testCreateStudent() throws RowsAmountException, EntityNotFoundException, EntityExistsException, InvalidIdException {
 		Subject group = subjectCrudDao.findById(subjectCrudDao.getAll(0,2).get(1).getId());
 
 		Teacher actualStudent = teacherCrudDao.create(new Teacher("New teacher", 7, group));
@@ -64,7 +67,7 @@ public class TeacherDaoTest {
 	}
 
 	@Test
-	public void testDeleteStudent() {
+	public void testDeleteStudent() throws InvalidIdException, EntityNotFoundException {
 		Teacher actualTeacher = teacherCrudDao.findById(this.teacher.getId());
 		boolean actualResult = teacherCrudDao.delete(actualTeacher);
 
@@ -72,7 +75,7 @@ public class TeacherDaoTest {
 	}
 
 	@Test
-	public void testUpdateStudent() {
+	public void testUpdateStudent() throws InvalidIdException, EntityNotFoundException {
 		Teacher expectedResult = teacherCrudDao.findById(this.teacher.getId());
 		expectedResult.setName("Updated teacher name");
 
@@ -83,14 +86,14 @@ public class TeacherDaoTest {
 	}
 
 	@Test
-	public void testFindById() {
+	public void testFindById() throws InvalidIdException, EntityNotFoundException {
 		Teacher actualGroup = teacherCrudDao.findById(this.teacher.getId());
 
 		Assert.assertEquals(this.teacher, actualGroup);
 	}
 
 	@Test
-	public void testGetAll() {
+	public void testGetAll() throws RowsAmountException, EntityNotFoundException {
 		int firstRow = 0;
 		int rowAmount = 10;
 		List<Teacher> students = teacherCrudDao.getAll(firstRow, rowAmount);
@@ -98,25 +101,23 @@ public class TeacherDaoTest {
 	}
 
 	@Test
-	public void testGetMostExperienceTeacher() {
+	public void testGetMostExperienceTeacher() throws EntityNotFoundException, RowsAmountException {
 		Teacher teacher = teacherCrudDao.getMostExperienceTeacher();
 		List<Teacher> allTeachers = teacherCrudDao.getAll(0,10);
-		System.out.println(teacher);
 		assertTrue(allTeachers.stream().allMatch((teacher1 -> TestUtils.checkExperienceMinMax(teacher, teacher1, true))));
 	}
 
 	@Test
-	public void testGetLessExperienceTeacher() {
+	public void testGetLessExperienceTeacher() throws EntityNotFoundException, RowsAmountException {
 		Teacher teacher = teacherCrudDao.getLessExperienceTeacher();
 		List<Teacher> allTeachers = teacherCrudDao.getAll(0,10);
-		System.out.println(teacher);
 		assertTrue(allTeachers.stream().allMatch((teacher1 -> TestUtils.checkExperienceMinMax(teacher, teacher1, false))));
 	}
 
 	@Test
-	public void testGetTeachersWithMoreThanThreeYearsExperience() {
+	public void testGetTeachersWithMoreThanThreeYearsExperience() throws InvalidNumberException, EntityNotFoundException {
 
-		List<Teacher> teachers = teacherCrudDao.getTeachersWithMoreThanThreeYearsExperience(THREE_YEARS);
+		List<Teacher> teachers = teacherCrudDao.getTeachersWithMoreThanYearsExperience(THREE_YEARS);
 
 		assertTrue(teachers.stream().allMatch((el) -> el.getExperience() > THREE_YEARS));
 

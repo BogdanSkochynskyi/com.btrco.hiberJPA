@@ -1,9 +1,11 @@
 package dao;
 
-import dao.impl.mysql.ISubjectDao;
-import entity.Group;
-import entity.Student;
+import dao.implementation.mySQL.SubjectDaoImpl;
 import entity.Subject;
+import exceptions.EntityExistsException;
+import exceptions.EntityNotFoundException;
+import exceptions.InvalidIdException;
+import exceptions.RowsAmountException;
 import org.junit.*;
 import utils.HibernateUtils;
 import utils.TestUtils;
@@ -39,27 +41,29 @@ public class SubjectDaoTest {
 	}
 
 	@Before
-	public void initDataInDB() {
+	public void initDataInDB() throws EntityExistsException {
 		this.subject = new Subject(TEST_SUBJECT_NAME, TEST_SUBJECT_DESCRIPTION);
 		subjectCrudDao.create(this.subject);
 	}
 
 	@After
 	public void removeDataFromDB() {
-		if (subjectCrudDao.findById(this.subject.getId()) != null) {
+		try {
 			subjectCrudDao.delete(this.subject);
+		} catch (EntityNotFoundException e) {
+			e.printStackTrace();
 		}
 	}
 
 	@Test
-	public void testCreateStudent() {
+	public void testCreateStudent() throws EntityExistsException {
 		Subject actualSubject = subjectCrudDao.create(new Subject("New Subject", "New subject description"));
 
 		Assert.assertNotNull(actualSubject);
 	}
 
 	@Test
-	public void testDeleteStudent() {
+	public void testDeleteStudent() throws InvalidIdException, EntityNotFoundException {
 		Subject actualSubject = subjectCrudDao.findById(this.subject.getId());
 		boolean actualResult = subjectCrudDao.delete(actualSubject);
 
@@ -67,7 +71,7 @@ public class SubjectDaoTest {
 	}
 
 	@Test
-	public void testUpdateStudent() {
+	public void testUpdateStudent() throws InvalidIdException, EntityNotFoundException {
 		Subject expectedResult = subjectCrudDao.findById(this.subject.getId());
 		expectedResult.setName("Updated subject");
 
@@ -78,14 +82,14 @@ public class SubjectDaoTest {
 	}
 
 	@Test
-	public void testFindById() {
+	public void testFindById() throws InvalidIdException, EntityNotFoundException {
 		Subject actualGroup = subjectCrudDao.findById(this.subject.getId());
 
 		Assert.assertEquals(this.subject, actualGroup);
 	}
 
 	@Test
-	public void testGetAll() {
+	public void testGetAll() throws RowsAmountException, EntityNotFoundException {
 		int firstRow = 0;
 		int rowAmount = 20;
 		List<Subject> subjects = subjectCrudDao.getAll(firstRow, rowAmount);
@@ -93,7 +97,7 @@ public class SubjectDaoTest {
 	}
 
 	@Test
-	public void testGetGumanitariumSubjects() {
+	public void testGetGumanitariumSubjects() throws EntityNotFoundException {
 		List<Subject> gumanitariumSubjects = subjectCrudDao.getGumanitariumSubjects();
 
 		assertTrue(gumanitariumSubjects.stream().allMatch(TestUtils::checkIsItGumanitariumSubject));

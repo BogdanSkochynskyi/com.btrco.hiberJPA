@@ -1,8 +1,11 @@
 package dao;
 
-import dao.impl.mysql.CrudDao;
+import dao.implementation.mySQL.GroupDaoImpl;
 import entity.Group;
-import org.apache.log4j.Logger;
+import exceptions.EntityExistsException;
+import exceptions.EntityNotFoundException;
+import exceptions.InvalidIdException;
+import exceptions.RowsAmountException;
 import org.junit.*;
 import utils.HibernateUtils;
 import utils.TestUtils;
@@ -33,27 +36,29 @@ public class GroupDaoTest {
 	}
 
 	@Before
-	public void initDataInDB() {
+	public void initDataInDB() throws EntityExistsException {
 		this.group = new Group("ACP_01");
-		groupCrudDao.create(this.group);
+		this.group = groupCrudDao.create(this.group);
 	}
 
 	@After
-	public void removeDataFromDB() {
-		if (groupCrudDao.findById(this.group.getId()) != null) {
+	public void removeDataFromDB()  {
+		try {
 			groupCrudDao.delete(this.group);
+		} catch (EntityNotFoundException e) {
+			e.printStackTrace();
 		}
 	}
 
 	@Test
-	public void testCreateGroup() {
+	public void testCreateGroup() throws EntityExistsException {
 		Group actualGroup = groupCrudDao.create(new Group("Group 5"));
 
 		Assert.assertNotNull(actualGroup);
 	}
 
 	@Test
-	public void testDeleteGroup() {
+	public void testDeleteGroup() throws InvalidIdException, EntityNotFoundException {
 
 		Group actualGroup = groupCrudDao.findById(this.group.getId());
 		boolean actualResult = groupCrudDao.delete(actualGroup);
@@ -61,7 +66,7 @@ public class GroupDaoTest {
 	}
 
 	@Test
-	public void testUpdateGroup() {
+	public void testUpdateGroup() throws InvalidIdException, EntityNotFoundException {
 		Group expectedResult = groupCrudDao.findById(this.group.getId());
 		expectedResult.setName("ACP_02");
 
@@ -72,14 +77,14 @@ public class GroupDaoTest {
 	}
 
 	@Test
-	public void testFindById() {
+	public void testFindById() throws InvalidIdException, EntityNotFoundException {
 		Group actualGroup = groupCrudDao.findById(this.group.getId());
 
 		Assert.assertEquals(this.group, actualGroup);
 	}
 
 	@Test
-	public void testGetAll() {
+	public void testGetAll() throws RowsAmountException, EntityNotFoundException {
 		int firstRow = 0;
 		int rowAmount = 20;
 		List<Group> groups = groupCrudDao.getAll(firstRow, rowAmount);

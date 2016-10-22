@@ -229,10 +229,10 @@
 2016-10-14 15:35:50 DEBUG Ejb3Configuration:850 - Detect class: true; detect hbm: true
 2016-10-14 15:35:50 DEBUG AbstractJarVisitor:126 - Searching mapped entities in jar/par: file:/Users/mac/Desktop/com.acp14.project/com.btrco.hiberJPA/target/classes/
 2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: CrudDao
-2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.GroupDaoImpl
-2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.StudentDaoImpl
-2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.SubjectDaoImpl
-2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.TeacherDaoImpl
+2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.implementation.mySQL.GroupDaoImpl
+2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.implementation.mySQL.StudentDaoImpl
+2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.implementation.mySQL.SubjectDaoImpl
+2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: dao.implementation.mySQL.TeacherDaoImpl
 2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: entity.Group
 2016-10-14 15:35:50 DEBUG AbstractJarVisitor:223 - Java element filter matched for entity.Group
 2016-10-14 15:35:50 DEBUG AbstractJarVisitor:172 - Filtering: entity.Student
@@ -740,10 +740,10 @@
 2016-10-14 15:38:14 DEBUG Ejb3Configuration:850 - Detect class: true; detect hbm: true
 2016-10-14 15:38:14 DEBUG AbstractJarVisitor:126 - Searching mapped entities in jar/par: file:/Users/mac/Desktop/com.acp14.project/com.btrco.hiberJPA/target/classes/
 2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: CrudDao
-2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.GroupDaoImpl
-2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.StudentDaoImpl
-2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.SubjectDaoImpl
-2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.TeacherDaoImpl
+2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.implementation.mySQL.GroupDaoImpl
+2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.implementation.mySQL.StudentDaoImpl
+2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.implementation.mySQL.SubjectDaoImpl
+2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: dao.implementation.mySQL.TeacherDaoImpl
 2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: entity.Group
 2016-10-14 15:38:14 DEBUG AbstractJarVisitor:223 - Java element filter matched for entity.Group
 2016-10-14 15:38:14 DEBUG AbstractJarVisitor:172 - Filtering: entity.Student
@@ -1497,7 +1497,7 @@ line 1:30: unexpected token: LIMIT
 	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:199)
 	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1778)
 	at org.hibernate.ejb.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:291)
-	at dao.GroupDaoImpl.getAll(GroupDaoImpl.java:110)
+	at dao.implementation.mySQL.GroupDaoImpl.getAll(GroupDaoImpl.java:110)
 	at dao.GroupDaoTest.testGetAll(GroupDaoImplTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1547,7 +1547,7 @@ line 1:47: unexpected token: :
 	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:199)
 	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1778)
 	at org.hibernate.ejb.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:291)
-	at dao.GroupDaoImpl.getAll(GroupDaoImpl.java:110)
+	at dao.implementation.mySQL.GroupDaoImpl.getAll(GroupDaoImpl.java:110)
 	at dao.GroupDaoTest.testGetAll(GroupDaoImplTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1611,7 +1611,7 @@ line 1:30: unexpected token: LIMIT
 	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:199)
 	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1778)
 	at org.hibernate.ejb.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:291)
-	at dao.GroupDaoImpl.getAll(GroupDaoImpl.java:110)
+	at dao.implementation.mySQL.GroupDaoImpl.getAll(GroupDaoImpl.java:110)
 	at dao.GroupDaoTest.testGetAll(GroupDaoImplTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1661,7 +1661,7 @@ line 1:47: unexpected token: :
 	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:199)
 	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1778)
 	at org.hibernate.ejb.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:291)
-	at dao.GroupDaoImpl.getAll(GroupDaoImpl.java:110)
+	at dao.implementation.mySQL.GroupDaoImpl.getAll(GroupDaoImpl.java:110)
 	at dao.GroupDaoTest.testGetAll(GroupDaoImplTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1725,7 +1725,7 @@ line 1:30: unexpected token: LIMIT
 	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:199)
 	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1778)
 	at org.hibernate.ejb.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:291)
-	at dao.GroupDaoImpl.getAll(GroupDaoImpl.java:110)
+	at dao.implementation.mySQL.GroupDaoImpl.getAll(GroupDaoImpl.java:110)
 	at dao.GroupDaoTest.testGetAll(GroupDaoImplTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1775,7 +1775,7 @@ line 1:47: unexpected token: :
 	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:199)
 	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1778)
 	at org.hibernate.ejb.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:291)
-	at dao.GroupDaoImpl.getAll(GroupDaoImpl.java:110)
+	at dao.implementation.mySQL.GroupDaoImpl.getAll(GroupDaoImpl.java:110)
 	at dao.GroupDaoTest.testGetAll(GroupDaoImplTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1839,7 +1839,7 @@ line 1:30: unexpected token: LIMIT
 	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:199)
 	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1778)
 	at org.hibernate.ejb.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:291)
-	at dao.GroupDaoImpl.getAll(GroupDaoImpl.java:111)
+	at dao.implementation.mySQL.GroupDaoImpl.getAll(GroupDaoImpl.java:111)
 	at dao.GroupDaoTest.testGetAll(GroupDaoImplTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1889,7 +1889,7 @@ line 1:47: unexpected token: :
 	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:199)
 	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1778)
 	at org.hibernate.ejb.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:291)
-	at dao.GroupDaoImpl.getAll(GroupDaoImpl.java:111)
+	at dao.implementation.mySQL.GroupDaoImpl.getAll(GroupDaoImpl.java:111)
 	at dao.GroupDaoTest.testGetAll(GroupDaoImplTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1961,7 +1961,7 @@ line 1:44: unexpected token: LIMIT
 	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:199)
 	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1778)
 	at org.hibernate.ejb.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:291)
-	at dao.GroupDaoImpl.getAll(GroupDaoImpl.java:111)
+	at dao.implementation.mySQL.GroupDaoImpl.getAll(GroupDaoImpl.java:111)
 	at dao.GroupDaoTest.testGetAll(GroupDaoImplTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -6661,3 +6661,399 @@ line 1:44: unexpected token: LIMIT
 2016-10-17 00:33:17 INFO  TeacherDaoImpl:56 - Add teacher into managed context
 2016-10-17 00:33:17 INFO  TeacherDaoImpl:58 - Teacher removed
 2016-10-17 00:33:17 INFO  TeacherDaoImpl:60 - Transaction commited
+2016-10-22 16:37:04 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:37:04 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:37:04 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:37:04 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:37:05 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:37:05 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:37:05 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:37:05 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:37:05 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:37:05 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:37:05 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:37:05 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 16:49:54 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:49:54 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:49:54 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:49:54 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:49:54 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:49:54 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:49:54 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:49:54 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:49:54 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:49:54 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:49:54 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:49:54 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 16:50:10 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:50:10 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:50:10 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:50:10 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:50:11 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:50:11 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:50:11 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:50:11 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:50:11 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:50:11 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:50:11 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:50:11 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 16:50:16 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:50:16 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:50:16 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:50:16 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:50:16 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:50:16 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:50:16 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:50:16 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:50:16 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:50:17 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:50:17 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:50:17 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 16:51:18 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:51:18 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:51:18 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:51:18 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:51:18 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:51:18 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:51:18 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:51:18 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:51:18 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:51:19 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:51:19 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:51:19 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 16:51:39 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:51:39 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:51:39 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:51:39 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:51:39 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:51:39 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:51:39 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:51:39 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:51:39 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:51:39 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:51:39 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:51:39 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 16:52:48 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:52:48 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:52:48 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:52:48 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:52:49 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:52:49 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:52:49 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:52:49 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:52:49 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:52:49 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:52:49 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:52:49 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 16:53:33 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:53:33 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:53:33 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:53:33 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:53:33 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:53:33 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:53:33 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:53:33 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:53:33 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:53:34 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:53:34 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:53:34 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 16:53:39 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:53:39 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:53:39 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:53:39 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:53:39 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:53:39 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:53:39 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:53:39 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:53:39 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:53:39 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:53:39 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:53:39 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 16:54:25 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:54:25 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:54:25 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:54:25 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:54:25 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:54:25 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:54:25 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:54:25 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:54:25 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:54:26 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:54:26 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:54:26 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 16:58:11 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:58:11 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:58:11 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:58:11 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:58:11 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:58:11 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:58:11 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:58:11 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:58:11 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:58:11 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:58:11 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:58:11 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 16:58:36 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:58:36 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:58:36 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:58:36 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:58:36 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:58:36 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:58:36 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:58:36 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:58:36 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:58:37 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:58:37 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:58:37 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 16:59:07 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 16:59:07 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 16:59:07 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 16:59:07 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 16:59:07 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 16:59:07 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 16:59:07 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 16:59:07 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 16:59:07 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 16:59:07 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 16:59:07 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 16:59:07 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:05:32 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:05:32 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:05:32 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:05:32 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:05:32 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:05:32 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:05:32 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:05:32 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:05:32 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:05:33 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:05:33 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:05:33 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:05:53 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:05:53 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:05:53 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:05:53 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:05:54 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:05:54 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:05:54 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:05:54 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:05:54 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:05:54 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:05:54 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:05:54 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:07:27 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:07:27 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:07:27 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:07:27 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:07:27 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:07:27 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:07:27 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:07:27 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:07:27 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:07:28 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:07:28 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:07:28 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:08:24 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:08:24 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:08:24 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:08:24 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:08:24 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:08:24 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:08:24 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:08:24 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:08:24 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:08:25 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:08:25 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:08:25 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:08:52 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:08:52 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:08:52 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:08:52 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:08:53 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:08:53 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:08:53 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:08:53 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:08:53 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:08:53 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:08:53 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:08:53 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:09:14 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:09:14 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:09:14 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:09:14 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:09:14 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:09:14 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:09:14 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:09:14 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:09:14 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:09:15 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:09:15 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:09:15 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:10:17 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:10:17 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:10:17 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:10:17 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:10:17 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:10:17 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:10:17 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:10:17 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:10:17 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:10:18 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:10:18 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:10:18 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:13:42 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:13:42 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:13:42 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:13:42 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:13:42 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:13:42 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:13:42 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:13:42 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:13:42 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:13:42 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:13:42 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:13:42 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:13:54 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:13:54 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:13:54 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:13:54 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:13:54 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:13:54 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:13:54 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:13:54 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:13:54 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:13:54 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:13:54 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:13:54 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:15:10 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:15:10 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:15:10 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:15:10 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:15:11 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:15:11 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:15:11 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:15:11 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:15:11 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:15:11 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:15:11 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:15:11 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:15:45 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:15:45 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:15:45 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:15:45 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:15:46 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:15:46 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:15:46 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:15:46 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:15:46 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:15:46 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:15:46 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:15:46 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:16:55 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:16:55 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:16:55 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:16:55 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:16:56 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:16:56 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:16:56 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:16:56 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:16:56 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:16:56 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:16:56 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:16:56 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:17:51 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:17:51 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:17:51 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:17:51 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:17:52 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:17:52 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:17:52 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:17:52 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:17:52 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:17:52 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:17:52 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:17:52 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:18:21 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:18:21 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:18:21 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:18:21 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:18:22 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:18:22 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:18:22 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:18:22 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:18:22 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:18:22 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:18:22 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:18:22 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:20:28 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:20:28 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:20:28 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:20:28 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:20:28 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:20:28 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:20:28 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:20:28 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:20:28 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:20:29 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:20:29 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:20:29 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:24:17 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:24:17 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:24:17 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:24:17 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:24:18 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:24:18 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:24:18 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:24:18 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:24:18 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:24:18 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:24:18 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:24:18 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:24:29 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:24:29 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:24:29 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:24:29 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:24:29 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:24:29 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:24:29 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:24:29 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:24:29 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:24:30 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:24:30 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:24:30 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:25:51 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:25:51 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:25:51 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:25:51 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:25:51 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:25:51 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:25:51 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:25:51 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:25:51 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:25:52 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:25:52 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:25:52 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:27:09 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:27:09 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:27:09 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:27:09 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:27:09 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:27:09 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:27:09 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:27:09 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:27:09 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:27:09 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:27:09 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:27:09 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-22 17:28:35 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-10-22 17:28:35 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-10-22 17:28:35 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-10-22 17:28:35 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-10-22 17:28:35 INFO  DriverManagerConnectionProviderImpl:98 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-22 17:28:35 INFO  DriverManagerConnectionProviderImpl:134 - HHH000115: Hibernate connection pool size: 20
+2016-10-22 17:28:35 INFO  DriverManagerConnectionProviderImpl:137 - HHH000006: Autocommit mode: true
+2016-10-22 17:28:35 INFO  DriverManagerConnectionProviderImpl:151 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/ACP14]
+2016-10-22 17:28:35 INFO  DriverManagerConnectionProviderImpl:156 - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+2016-10-22 17:28:36 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-22 17:28:36 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-10-22 17:28:36 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
