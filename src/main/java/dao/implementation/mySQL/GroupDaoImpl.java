@@ -7,6 +7,7 @@ import exceptions.EntityExistsException;
 import exceptions.EntityNotFoundException;
 import exceptions.InvalidIdException;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 import utils.HibernateUtils;
 import utils.Utils;
 
