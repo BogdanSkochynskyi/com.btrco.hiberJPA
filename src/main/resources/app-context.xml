@@ -13,12 +13,14 @@
 
     <context:property-placeholder location="db.properties"/>
     <context:component-scan base-package="com.btrco.hiberJPA"/>
+
     <aop:aspectj-autoproxy/>
+
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
 
-    <!--<bean id="myAspect" class="com.btrco.hiberJPA.aspects.LoggingAspect"/>-->
+    <bean id="myAspect" class="com.btrco.hiberJPA.aop.LoggingAspect"/>
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${hibernate.driverClassName}"/>
