@@ -1,6 +1,5 @@
 package com.btrco.hiberJPA.dao;
 
-import com.btrco.hiberJPA.dao.implementation.mySQL.GroupDaoImpl;
 import com.btrco.hiberJPA.dao.implementation.mySQL.StudentDaoImpl;
 import com.btrco.hiberJPA.entity.Group;
 import com.btrco.hiberJPA.entity.Student;
@@ -8,35 +7,56 @@ import com.btrco.hiberJPA.exceptions.EntityExistsException;
 import com.btrco.hiberJPA.exceptions.EntityNotFoundException;
 import com.btrco.hiberJPA.exceptions.InvalidIdException;
 import com.btrco.hiberJPA.exceptions.RowsAmountException;
+import com.btrco.hiberJPA.utils.ApplicationContextFactory;
 import org.junit.*;
 import com.btrco.hiberJPA.utils.HibernateUtils;
 import com.btrco.hiberJPA.utils.TestUtils;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
+@RunWith(SpringRunner.class)
+@ContextConfiguration("classpath:app-context.xml")
+@Transactional
 public class StudentDaoTest {
-	private static EntityManager entityManager;
-	private static IStudentDao studentCrudDao;
-	private static IGroupDao groupCrudDao;
+
+	private static TestUtils utils;
+
+//	@PersistenceContext
+//	private EntityManager entityManager;
+
+	@Autowired
+	private IStudentDao studentCrudDao;
+
+	@Autowired
+	private IGroupDao groupCrudDao;
 	private Student student;
 
 	@BeforeClass
 	public static void initializeConections() {
-		entityManager = HibernateUtils.getEntityManager();
+//		entityManager = HibernateUtils.getEntityManager();
 
-		studentCrudDao = new StudentDaoImpl(entityManager);
-		groupCrudDao = new GroupDaoImpl(entityManager);
+//		studentCrudDao = new StudentDaoImpl();
+//		groupCrudDao = new GroupDaoImpl(/*entityManager*/);
+		ApplicationContext context = ApplicationContextFactory.getApplicationContext();
+		utils = context.getBean("testUtils", TestUtils.class);
 
-		TestUtils.addDataIntoDB();
+		utils.addDataIntoDB();
 	}
 
 	@AfterClass
 	public static void shutdownConnection() {
-		TestUtils.trancateTables();
+		utils.trancateTables();
 
-		entityManager.clear();
-		entityManager.close();
+//		entityManager.clear();
+//		entityManager.close();
 
 	}
 

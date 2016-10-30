@@ -9,11 +9,16 @@ import com.btrco.hiberJPA.exceptions.InvalidIdException;
 import org.apache.log4j.Logger;
 import com.btrco.hiberJPA.utils.HibernateUtils;
 import com.btrco.hiberJPA.utils.Utils;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
+
+@Component("studentDao")
 public class StudentDaoImpl implements IStudentDao {
 
 	private static final Logger LOG = Logger.getLogger(StudentDaoImpl.class.getName());
@@ -24,13 +29,11 @@ public class StudentDaoImpl implements IStudentDao {
 	private EntityManager entityManager;
 
 	public StudentDaoImpl() {
-		this.entityManager = HibernateUtils.getEntityManager();
+
 	}
 
-	public StudentDaoImpl(EntityManager entityManager) {
-		this.entityManager = entityManager;
-	}
-
+	@Transactional
+	@Override
 	public Student create(Student student) throws EntityExistsException {
 		LOG.trace("User try to create student");
 
@@ -38,23 +41,25 @@ public class StudentDaoImpl implements IStudentDao {
 			throw new EntityExistsException(student.toString());
 		}
 
-		EntityTransaction transaction = entityManager.getTransaction();
+//		EntityTransaction transaction = entityManager.getTransaction();
 		try {
-			transaction.begin();
+//			transaction.begin();
 			LOG.trace("Transaction began");
 			entityManager.persist(student);
 			LOG.trace("Student persisted");
-			transaction.commit();
+//			transaction.commit();
 			LOG.trace("Transaction commited");
 		} catch (Exception e) {
 			LOG.error("Operation failed");
-			transaction.rollback();
+//			transaction.rollback();
 			LOG.trace("Transaction rolled back");
 			return null;
 		}
 		return student;
 	}
 
+	@Transactional
+	@Override
 	public boolean delete(Student student) throws EntityNotFoundException {
 		LOG.trace("User try to delete student");
 
@@ -62,27 +67,29 @@ public class StudentDaoImpl implements IStudentDao {
 			throw new EntityNotFoundException(student.toString());
 		}
 
-		EntityTransaction transaction = entityManager.getTransaction();
+//		EntityTransaction transaction = entityManager.getTransaction();
 		try {
-			transaction.begin();
+//			transaction.begin();
 			LOG.trace("Transaction began");
 			student = entityManager.find(Student.class, student.getId());
 			LOG.trace("Add student into managed context");
 			entityManager.remove(student);
 			LOG.trace("Student removed");
-			transaction.commit();
+//			transaction.commit();
 		} catch (Exception e) {
 			LOG.error("Operation failed");
-			transaction.rollback();
+//			transaction.rollback();
 			LOG.trace("Transaction rolled back");
 			return false;
 		}
 		return true;
 	}
 
+	@Transactional
+	@Override
 	public boolean update(Student student) throws EntityNotFoundException {
 		LOG.trace("User try to update student");
-		EntityTransaction transaction = entityManager.getTransaction();
+//		EntityTransaction transaction = entityManager.getTransaction();
 
 		Student studentFromDB = entityManager.find(Student.class, student.getId());
 
@@ -94,21 +101,23 @@ public class StudentDaoImpl implements IStudentDao {
 		Utils.copyStudent(student, studentFromDB);
 		LOG.trace("Group data updated correct");
 		try {
-			transaction.begin();
+//			transaction.begin();
 			LOG.trace("Transaction began");
 			entityManager.persist(student);
 			LOG.trace("Student added to managed context");
-			transaction.commit();
+//			transaction.commit();
 			LOG.trace("Transaction commited");
 		} catch (Exception e) {
 			LOG.error("Operation failed");
-			transaction.rollback();
+//			transaction.rollback();
 			LOG.trace("Transaction rolled back");
 			return false;
 		}
 		return true;
 	}
 
+	@Transactional
+	@Override
 	public Student findById(Object id) throws InvalidIdException, EntityNotFoundException {
 		LOG.trace("User try to find student by id");
 
@@ -124,7 +133,7 @@ public class StudentDaoImpl implements IStudentDao {
 		return studentFromDB;
 	}
 
-	//TODO: add exception(how to know amount of rows without of select all of them) count
+	@Transactional
 	@Override
 	public List<Student> getAll(int firstRow, int rowsAmount) {
 		LOG.trace("User try to find students from " + firstRow + " row and with row amount " + rowsAmount);
@@ -134,6 +143,8 @@ public class StudentDaoImpl implements IStudentDao {
 				.getResultList();
 	}
 
+	@Transactional
+	@Override
 	public List<Student> getListOfStudentsInGroup(Group group) throws EntityNotFoundException {
 		LOG.trace("User try to get list of students by group");
 
@@ -151,6 +162,7 @@ public class StudentDaoImpl implements IStudentDao {
 		}
 	}
 
+	@PersistenceContext
 	public void setEntityManager(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}

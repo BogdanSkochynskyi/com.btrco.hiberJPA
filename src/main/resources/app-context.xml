@@ -1,18 +1,24 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:tx="http://www.springframework.org/schema/tx"
-       xsi:schemaLocation="
-        http://www.springframework.org/schema/beans
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/data/jpa
         http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <context:property-placeholder location="db.properties"/>
+    <context:component-scan base-package="com.btrco.hiberJPA"/>
+    <aop:aspectj-autoproxy/>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
+
+    <!--<bean id="myAspect" class="com.btrco.hiberJPA.aspects.LoggingAspect"/>-->
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${hibernate.driverClassName}"/>
@@ -21,51 +27,23 @@
         <property name="password" value="${hibernate.password}"/>
     </bean>
 
-    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-        <property name="entityManagerFactory" ref="entityManagerFactory"/>
-        <property name="jpaDialect" ref="jpaDialect"/>
-    </bean>
-
-    <bean id="jpaDialect" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
-
-
-    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
-
-    <tx:annotation-driven transaction-manager="transactionManager"/>
-
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <!--<property name="jpaVendorAdapter">
+        <property name="packagesToScan" value="com.btrco.hiberJPA"/>
+        <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
-        </property>-->
-        <property name="packagesToScan" value="com.btrco"/>
+        </property>
         <property name="jpaProperties">
             <props>
-                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
-                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
-                <prop key="hibernate.hbm2ddl.auto">"${hibernate.hbm2ddl_auto}"</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
             </props>
         </property>
     </bean>
 
-    <context:component-scan base-package="com.btrco.hiberJPA.*"/>
-
-    <bean id="iGroupDao"   class="com.btrco.hiberJPA.dao.implementation.mySQL.GroupDaoImpl"/>
-    <bean id="iStudentDao" class="com.btrco.hiberJPA.dao.implementation.mySQL.StudentDaoImpl"/>
-    <bean id="iSubjectDao" class="com.btrco.hiberJPA.dao.implementation.mySQL.SubjectDaoImpl"/>
-    <bean id="iTeacherDao" class="com.btrco.hiberJPA.dao.implementation.mySQL.TeacherDaoImpl"/>
-
-    <bean id="iGroupService" class="com.btrco.hiberJPA.service.implementation.GroupServiceImpl">
-        <constructor-arg name="groupDao" ref="iGroupDao"/>
-    </bean>
-    <bean id="iStudentService" class="com.btrco.hiberJPA.service.implementation.StudentServiceImpl">
-        <constructor-arg name="studentDao" ref="iStudentDao"/>
-    </bean>
-    <bean id="iSubjectService" class="com.btrco.hiberJPA.service.implementation.SubjectServiceImpl">
-        <constructor-arg name="subjectDao" ref="iSubjectDao"/>
-    </bean>
-    <bean id="iTeacherService" class="com.btrco.hiberJPA.service.implementation.TeacherServiceImpl">
-        <constructor-arg name="teacherDao" ref="iTeacherDao"/>
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
 </beans>

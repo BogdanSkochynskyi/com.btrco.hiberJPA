@@ -5,40 +5,50 @@ import com.btrco.hiberJPA.dao.implementation.mySQL.TeacherDaoImpl;
 import com.btrco.hiberJPA.entity.Subject;
 import com.btrco.hiberJPA.entity.Teacher;
 import com.btrco.hiberJPA.exceptions.*;
+import com.btrco.hiberJPA.utils.ApplicationContextFactory;
 import org.junit.*;
 import com.btrco.hiberJPA.utils.HibernateUtils;
 import com.btrco.hiberJPA.utils.TestUtils;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
+@RunWith(SpringRunner.class)
+@ContextConfiguration("classpath:app-context.xml")
+@Transactional
 public class TeacherDaoTest {
 
-	private static EntityManager entityManager;
 	private static final int THREE_YEARS = 3;
-	private static ITeacherDao teacherCrudDao;
-	private static ISubjectDao subjectCrudDao;
+
+	private static TestUtils utils;
+
+	@Autowired
+	private ITeacherDao teacherCrudDao;
+
+	@Autowired
+	private ISubjectDao subjectCrudDao;
 	private Teacher teacher;
 
 
 	@BeforeClass
 	public static void initializeConections() {
-		entityManager = HibernateUtils.getEntityManager();
+		ApplicationContext context = ApplicationContextFactory.getApplicationContext();
+		utils = context.getBean("testUtils", TestUtils.class);
 
-		teacherCrudDao = new TeacherDaoImpl(entityManager);
-		subjectCrudDao = new SubjectDaoImpl(entityManager);
-
-		TestUtils.addDataIntoDB();
+		utils.addDataIntoDB();
 	}
 
 	@AfterClass
 	public static void shutdownConnection() {
-		TestUtils.trancateTables();
-
-		entityManager.clear();
-		entityManager.close();
+		utils.trancateTables();
 	}
 
 	@Before

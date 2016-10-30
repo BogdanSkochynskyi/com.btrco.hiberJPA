@@ -11,6 +11,7 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import com.btrco.hiberJPA.service.implementation.SubjectServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +20,11 @@ import static org.mockito.Mockito.*;
 
 public class SubjectServiceTest {
 
+	@Autowired
 	private static ISubjectService service;
 
 	@Mock
+	@Autowired
 	private ISubjectDao subjectDao;
 	private Subject testSubject;
 
@@ -29,7 +32,7 @@ public class SubjectServiceTest {
 	public void mockInitialization() throws RowsAmountException, EntityNotFoundException, EntityExistsException {
 		this.testSubject = new Subject("Test subject", "subject definition");
 		MockitoAnnotations.initMocks(this);
-		service = new SubjectServiceImpl(this.subjectDao);
+//		service = new SubjectServiceImpl();
 		when(this.subjectDao.getAll(0, 20)).thenReturn(getSubjectsList(20));
 		when(this.subjectDao.create(this.testSubject)).thenReturn(this.testSubject);
 		when(this.subjectDao.update(this.testSubject)).thenReturn(true);

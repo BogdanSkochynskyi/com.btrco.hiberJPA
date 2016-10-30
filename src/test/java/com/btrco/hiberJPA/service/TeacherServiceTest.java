@@ -13,6 +13,7 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import com.btrco.hiberJPA.service.implementation.TeacherServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +22,11 @@ import static org.mockito.Mockito.when;
 
 public class TeacherServiceTest {
 
+	@Autowired
 	private static ITeacherService service;
 
 	@Mock
+	@Autowired
 	private ITeacherDao teacherDao;
 	private Teacher testTeacher;
 	private Subject testSubject;
@@ -33,7 +36,7 @@ public class TeacherServiceTest {
 		this.testSubject = new Subject("Test subject", "subject definition");
 		this.testTeacher = new Teacher("Teacher name", 5, this.testSubject);
 		MockitoAnnotations.initMocks(this);
-		service = new TeacherServiceImpl(this.teacherDao);
+//		service = new TeacherServiceImpl();
 		when(teacherDao.getAll(0, 20)).thenReturn(getTeachersList(20));
 		when(teacherDao.create(this.testTeacher)).thenReturn(this.testTeacher);
 		when(teacherDao.update(this.testTeacher)).thenReturn(true);

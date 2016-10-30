@@ -8,26 +8,28 @@ import com.btrco.hiberJPA.exceptions.InvalidIdException;
 import org.apache.log4j.Logger;
 import com.btrco.hiberJPA.utils.HibernateUtils;
 import com.btrco.hiberJPA.utils.Utils;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
+@Component("subjectDao")
 public class SubjectDaoImpl implements ISubjectDao {
 
 	private static final Logger LOG = Logger.getLogger(SubjectDaoImpl.class.getName());
 	private static final String GET_GUMANITARIUM_SUBJECTS	= "SELECT s FROM Subject s WHERE s.name IN ('history', 'literature', 'phylosophy')";
 	private static final String GET_ALL_SUBJECTS = "SELECT s FROM Subject s";
+
 	private EntityManager entityManager;
 
 	public SubjectDaoImpl() {
-		this.entityManager = HibernateUtils.getEntityManager();
 	}
 
-	public SubjectDaoImpl(EntityManager entityManager) {
-		this.entityManager = entityManager;
-	}
-
+	@Transactional
+	@Override
 	public Subject create(Subject subject) throws EntityExistsException {
 		LOG.trace("User try to create subject");
 
@@ -35,23 +37,25 @@ public class SubjectDaoImpl implements ISubjectDao {
 			throw new EntityExistsException(subject.toString());
 		}
 
-		EntityTransaction transaction = entityManager.getTransaction();
+//		EntityTransaction transaction = entityManager.getTransaction();
 		try {
-			transaction.begin();
+//			transaction.begin();
 			LOG.trace("Transaction began");
 			entityManager.persist(subject);
 			LOG.trace("Subject persisted");
-			transaction.commit();
+//			transaction.commit();
 			LOG.trace("Transaction commited");
 		} catch (Exception e) {
 			LOG.error("Operation failed");
-			transaction.rollback();
+//			transaction.rollback();
 			LOG.trace("Transaction rolled back");
 			return null;
 		}
 		return subject;
 	}
 
+	@Transactional
+	@Override
 	public boolean delete(Subject subject) throws EntityNotFoundException {
 		LOG.trace("User try to delete group");
 
@@ -59,28 +63,30 @@ public class SubjectDaoImpl implements ISubjectDao {
 			throw new EntityNotFoundException(subject.toString());
 		}
 
-		EntityTransaction transaction = entityManager.getTransaction();
+//		EntityTransaction transaction = entityManager.getTransaction();
 		try {
-			transaction.begin();
+//			transaction.begin();
 			LOG.trace("Transaction began");
 			subject = entityManager.find(Subject.class, subject.getId());
 			LOG.trace("Add subject into managed context");
 			entityManager.remove(subject);
 			LOG.trace("Group removed");
-			transaction.commit();
+//			transaction.commit();
 			LOG.trace("Transaction commited");
 		} catch (Exception e) {
 			LOG.error("Operation failed");
-			transaction.rollback();
+//			transaction.rollback();
 			LOG.trace("Transaction rolled back");
 			return false;
 		}
 		return true;
 	}
 
+	@Transactional
+	@Override
 	public boolean update(Subject subject) throws EntityNotFoundException {
 		LOG.trace("User try to update subject");
-		EntityTransaction transaction = entityManager.getTransaction();
+//		EntityTransaction transaction = entityManager.getTransaction();
 
 		Subject subjectFromDB = entityManager.find(Subject.class, subject.getId());
 
@@ -92,21 +98,23 @@ public class SubjectDaoImpl implements ISubjectDao {
 		Utils.copySubject(subject, subjectFromDB);
 		LOG.trace("Subject data updated correct");
 		try {
-			transaction.begin();
+//			transaction.begin();
 			LOG.trace("Transaction began");
 			entityManager.persist(subjectFromDB);
 			LOG.trace("Subject added to managed context");
-			transaction.commit();
+//			transaction.commit();
 			LOG.trace("Transaction commited");
 		} catch (Exception e) {
 			LOG.error("Operation failed");
-			transaction.rollback();
+//			transaction.rollback();
 			LOG.trace("Transaction rolled back");
 			return false;
 		}
 		return true;
 	}
 
+	@Transactional
+	@Override
 	public Subject findById(Object id) throws InvalidIdException, EntityNotFoundException {
 		LOG.trace("User try to find subject by id");
 
@@ -122,6 +130,7 @@ public class SubjectDaoImpl implements ISubjectDao {
 		return subjectFromDB;
 	}
 
+	@Transactional
 	@Override
 	public List<Subject> getAll(int firstRow, int rowsAmount) {
 		LOG.trace("User try to find subjects from " + firstRow + " row and with row amount " + rowsAmount);
@@ -131,6 +140,7 @@ public class SubjectDaoImpl implements ISubjectDao {
 				.getResultList();
 	}
 
+	@Transactional
 	@Override
 	public List<Subject> getGumanitariumSubjects() throws EntityNotFoundException {
 		LOG.trace("User try to find only gumanitarium subjects");
@@ -145,6 +155,7 @@ public class SubjectDaoImpl implements ISubjectDao {
 
 	}
 
+	@PersistenceContext
 	public void setEntityManager(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}
