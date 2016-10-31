@@ -22,6 +22,10 @@ public class SubjectServiceImpl implements ISubjectService {
 	public SubjectServiceImpl() {
 	}
 
+	public SubjectServiceImpl(ISubjectDao subjectDao) {
+		this.subjectDao = subjectDao;
+	}
+
 	@Transactional
 	@Override
 	public List<Subject> getListOfSubjects() throws RowsAmountException, EntityNotFoundException {

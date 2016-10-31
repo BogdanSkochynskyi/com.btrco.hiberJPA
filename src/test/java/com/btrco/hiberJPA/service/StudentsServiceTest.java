@@ -6,11 +6,16 @@ import com.btrco.hiberJPA.entity.Subject;
 import com.btrco.hiberJPA.exceptions.EntityExistsException;
 import com.btrco.hiberJPA.exceptions.EntityNotFoundException;
 import com.btrco.hiberJPA.exceptions.RowsAmountException;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +23,15 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.when;
 
+//TODO: rewrite with correct mocks
 public class StudentsServiceTest {
 
 	@Mock
 	private static IStudentService service;
+
 	private Student testStudent;
 	private Group testGroup;
 	private Subject testSubject;
@@ -41,6 +49,11 @@ public class StudentsServiceTest {
 		when(service.getStudentsByGroup(this.testGroup)).thenReturn(new ArrayList<>());
 		when(service.getAverageMarkBySubjectInGroup(this.testSubject, this.testGroup)).thenReturn(3.5f);
 		when(service.getAverageMarkBySubject(this.testSubject)).thenReturn(4.5f);
+	}
+
+	@After
+	public void resetMocks() {
+		reset(service);
 	}
 
 	@Test

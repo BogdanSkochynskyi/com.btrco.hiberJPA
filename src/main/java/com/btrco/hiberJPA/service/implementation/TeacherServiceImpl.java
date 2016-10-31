@@ -23,6 +23,10 @@ public class TeacherServiceImpl implements ITeacherService {
 	public TeacherServiceImpl() {
 	}
 
+	public TeacherServiceImpl(ITeacherDao teacherDao) {
+		this.teacherDao = teacherDao;
+	}
+
 	@Transactional
 	@Override
 	public List<Teacher> getListOfTeachers() throws RowsAmountException, EntityNotFoundException {

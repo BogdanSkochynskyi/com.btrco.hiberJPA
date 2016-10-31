@@ -6,8 +6,13 @@ import com.btrco.hiberJPA.exceptions.EntityExistsException;
 import com.btrco.hiberJPA.exceptions.EntityNotFoundException;
 import com.btrco.hiberJPA.exceptions.RowsAmountException;
 import org.junit.*;
+import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +20,13 @@ import java.util.List;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+
+//TODO: rewrite with correct mocks
 public class GroupServiceTest {
 
 	@Mock
 	private static IGroupService service;
+
 	private Group testGroup;
 	private Subject testSubject;
 
@@ -32,6 +40,11 @@ public class GroupServiceTest {
 		when(service.addGroup(this.testGroup)).thenReturn(this.testGroup);
 		when(service.updateGroup(this.testGroup)).thenReturn(true);
 		when(service.getGroupsThatStudySubject(this.testSubject)).thenReturn(new ArrayList<>());
+	}
+
+	@After
+	public void resetMocks() {
+		reset(service);
 	}
 
 	@Test

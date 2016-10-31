@@ -20,6 +20,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
+//TODO: rewrite tests without spring??? REWRITE tests with using hamcrest library
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration("classpath:app-context.xml")
