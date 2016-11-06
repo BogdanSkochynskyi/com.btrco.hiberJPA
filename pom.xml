@@ -20,7 +20,9 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>servletTest</finalName>
     </build>
+    <packaging>war</packaging>
 
     <dependencies>
         <!--MySQL-->
@@ -108,6 +110,16 @@
             <artifactId>spring-data-jpa</artifactId>
             <version>${spring-data-jpa.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring-core.version}</version>
+        </dependency>
         <!--Transactions-->
         <dependency>
             <groupId>javax.transaction</groupId>
@@ -130,6 +142,17 @@
             <artifactId>aspectjtools</artifactId>
             <version>${aspectJ-version}</version>
         </dependency>
+        <!--WEB-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${javax.servlet-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -145,6 +168,8 @@
         <mockito-core.version>2.2.5</mockito-core.version>
         <hamcrest-all.version>1.3</hamcrest-all.version>
         <aspectJ-version>1.8.9</aspectJ-version>
+        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+        <jstl.version>1.2</jstl.version>
     </properties>
 
 </project>

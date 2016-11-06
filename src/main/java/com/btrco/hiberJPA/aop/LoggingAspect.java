@@ -22,7 +22,7 @@ public class LoggingAspect {
 	@Before("execution(public * com.btrco.hiberJPA.dao.implementation.mySQL..*(..))")
 	public void loggingBeforeMethodInvocation(JoinPoint joinPoint) {
 		setData(joinPoint);
-		LOG.error("The method " + this.methodName
+		LOG.trace("The method " + this.methodName
 				+ " with arguments " + arguments
 				+ " was called in " + this.className);
 	}
@@ -30,7 +30,7 @@ public class LoggingAspect {
 	@After("execution(public * com.btrco.hiberJPA.dao.implementation.mySQL..*(..))")
 	public void loggingAfterMethodInvoction(JoinPoint joinPoint) {
 		setData(joinPoint);
-		LOG.error("The method " + this.methodName
+		LOG.trace("The method " + this.methodName
 				+ " with arguments " + arguments
 				+ " in " + this.className + " was finished");
 	}
@@ -47,7 +47,7 @@ public class LoggingAspect {
 	@AfterReturning(value = "execution(public * com.btrco.hiberJPA.dao.implementation.mySQL..*(..))", returning = "result")
 	public void loggingReturnedValues(JoinPoint joinPoint, Object result) {
 		setData(joinPoint);
-		LOG.error("The method " + this.methodName
+		LOG.trace("The method " + this.methodName
 				+ " with arguments " + arguments
 				+ " in " + this.className
 				+ " was returned an Object: " + result);

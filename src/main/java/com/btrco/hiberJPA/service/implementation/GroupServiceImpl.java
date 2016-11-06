@@ -5,6 +5,7 @@ import com.btrco.hiberJPA.entity.Group;
 import com.btrco.hiberJPA.entity.Subject;
 import com.btrco.hiberJPA.exceptions.EntityExistsException;
 import com.btrco.hiberJPA.exceptions.EntityNotFoundException;
+import com.btrco.hiberJPA.exceptions.InvalidIdException;
 import com.btrco.hiberJPA.exceptions.RowsAmountException;
 import com.btrco.hiberJPA.service.IGroupService;
 import com.btrco.hiberJPA.utils.Utils;
@@ -57,6 +58,17 @@ public class GroupServiceImpl implements IGroupService {
 	public List<Group> getGroupsThatStudySubject(Subject subject) throws EntityNotFoundException {
 		List<Group> groupList = groupDao.getGroupsThatStudySubject(subject);  //Not DAO? rewrite by code
 		return groupList;
+	}
+
+	@Override
+	public Group getGroupByName(String oldGroupName) {
+		return null;
+	}
+
+	@Override
+	public Group getGroupById(int id) throws InvalidIdException, EntityNotFoundException {
+		Group group = groupDao.findById(id);
+		return group;
 	}
 
 	public IGroupDao getGroupDao() {
