@@ -5,6 +5,7 @@ import com.btrco.hiberJPA.entity.Student;
 import com.btrco.hiberJPA.entity.Subject;
 import com.btrco.hiberJPA.exceptions.EntityExistsException;
 import com.btrco.hiberJPA.exceptions.EntityNotFoundException;
+import com.btrco.hiberJPA.exceptions.InvalidIdException;
 import com.btrco.hiberJPA.exceptions.RowsAmountException;
 
 import java.util.List;
@@ -24,5 +25,7 @@ public interface IStudentService {
 	float getAverageMarkBySubjectInGroup(Subject subject, Group group);
 
 	float getAverageMarkBySubject(Subject subject);
+
+	Student getStudentById(int id) throws InvalidIdException, EntityNotFoundException;
 
 }

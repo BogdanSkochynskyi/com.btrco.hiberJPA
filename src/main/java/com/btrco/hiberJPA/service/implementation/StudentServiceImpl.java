@@ -6,6 +6,7 @@ import com.btrco.hiberJPA.entity.Student;
 import com.btrco.hiberJPA.entity.Subject;
 import com.btrco.hiberJPA.exceptions.EntityExistsException;
 import com.btrco.hiberJPA.exceptions.EntityNotFoundException;
+import com.btrco.hiberJPA.exceptions.InvalidIdException;
 import com.btrco.hiberJPA.exceptions.RowsAmountException;
 import com.btrco.hiberJPA.service.IStudentService;
 import com.btrco.hiberJPA.utils.Utils;
@@ -69,6 +70,11 @@ public class StudentServiceImpl implements IStudentService {
 	@Override
 	public float getAverageMarkBySubject(Subject subject) {
 		return 0;
+	}
+
+	@Override
+	public Student getStudentById(int id) throws InvalidIdException, EntityNotFoundException {
+		return studentDao.findById(id);
 	}
 
 	public IStudentDao getStudentDao() {

@@ -15637,3 +15637,100 @@ com.btrco.hiberJPA.exceptions.EntityNotFoundException: Teacher{id=8852, name='Te
 2016-10-30 18:09:16 INFO  TransactionContext:136 - Rolled back transaction for test context [DefaultTestContext@7f53b345 testClass = TeacherDaoTest, testInstance = com.btrco.hiberJPA.dao.TeacherDaoTest@6318ff9, testMethod = testGetAll@TeacherDaoTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@34c07ecc testClass = TeacherDaoTest, locations = '{classpath:app-context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
 2016-10-30 18:09:17 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@7f42b194: startup date [Sun Oct 30 18:09:11 EET 2016]; root of context hierarchy
 2016-10-30 18:09:17 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-11-12 12:03:01 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1055e4af: startup date [Sat Nov 12 12:03:01 EET 2016]; root of context hierarchy
+2016-11-12 12:03:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-12 12:03:01 INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-12 12:03:02 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-12 12:03:02 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-12 12:03:02 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-12 12:03:02 INFO  Version:37 - HHH000412: Hibernate Core {5.0.6.Final}
+2016-11-12 12:03:02 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-12 12:03:02 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-11-12 12:03:02 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-12 12:03:02 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-12 12:03:03 INFO  SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2016-11-12 12:03:03 ERROR GroupDaoImpl:31 - Group DAO created
+2016-11-12 12:03:03 ERROR HiberJPA project LOG:19 - LOGGING ASPECT CREATED
+2016-11-12 12:05:11 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1055e4af: startup date [Sat Nov 12 12:05:11 EET 2016]; root of context hierarchy
+2016-11-12 12:05:11 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-12 12:05:11 INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-12 12:05:12 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-12 12:05:12 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-12 12:05:12 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-12 12:05:12 INFO  Version:37 - HHH000412: Hibernate Core {5.0.6.Final}
+2016-11-12 12:05:12 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-12 12:05:12 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-11-12 12:05:12 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-12 12:05:12 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-12 12:05:13 INFO  SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2016-11-12 12:05:13 ERROR GroupDaoImpl:31 - Group DAO created
+2016-11-12 12:05:13 ERROR HiberJPA project LOG:19 - LOGGING ASPECT CREATED
+2016-11-12 12:44:19 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1055e4af: startup date [Sat Nov 12 12:44:19 EET 2016]; root of context hierarchy
+2016-11-12 12:44:19 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-12 12:44:19 INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-12 12:44:19 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-12 12:44:19 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-12 12:44:19 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-12 12:44:19 INFO  Version:37 - HHH000412: Hibernate Core {5.0.6.Final}
+2016-11-12 12:44:19 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-12 12:44:19 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-11-12 12:44:20 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-12 12:44:20 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-12 12:44:20 INFO  SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2016-11-12 12:44:20 ERROR GroupDaoImpl:31 - Group DAO created
+2016-11-12 12:44:21 ERROR HiberJPA project LOG:19 - LOGGING ASPECT CREATED
+2016-11-12 12:44:35 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1055e4af: startup date [Sat Nov 12 12:44:35 EET 2016]; root of context hierarchy
+2016-11-12 12:44:35 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-12 12:44:36 INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-12 12:44:36 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-12 12:44:36 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-12 12:44:36 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-12 12:44:36 INFO  Version:37 - HHH000412: Hibernate Core {5.0.6.Final}
+2016-11-12 12:44:36 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-12 12:44:36 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-11-12 12:44:36 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-12 12:44:37 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-12 12:44:37 INFO  SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2016-11-12 12:44:37 ERROR GroupDaoImpl:31 - Group DAO created
+2016-11-12 12:44:37 ERROR HiberJPA project LOG:19 - LOGGING ASPECT CREATED
+2016-11-12 12:46:59 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@72b6cbcc: startup date [Sat Nov 12 12:46:59 EET 2016]; root of context hierarchy
+2016-11-12 12:46:59 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-12 12:46:59 INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-12 12:47:00 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-12 12:47:00 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-12 12:47:00 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-12 12:47:00 INFO  Version:37 - HHH000412: Hibernate Core {5.0.6.Final}
+2016-11-12 12:47:00 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-12 12:47:00 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-11-12 12:47:00 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-12 12:47:00 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-12 12:47:01 INFO  SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2016-11-12 12:47:01 ERROR GroupDaoImpl:31 - Group DAO created
+2016-11-12 12:47:01 ERROR HiberJPA project LOG:19 - LOGGING ASPECT CREATED
+2016-11-12 13:22:40 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1055e4af: startup date [Sat Nov 12 13:22:40 EET 2016]; root of context hierarchy
+2016-11-12 13:22:40 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-12 13:22:41 INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-12 13:22:41 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-12 13:22:41 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-12 13:22:41 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-12 13:22:41 INFO  Version:37 - HHH000412: Hibernate Core {5.0.6.Final}
+2016-11-12 13:22:41 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-12 13:22:41 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-11-12 13:22:41 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-12 13:22:42 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-12 13:22:42 INFO  SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2016-11-12 13:22:42 ERROR GroupDaoImpl:31 - Group DAO created
+2016-11-12 13:22:42 ERROR HiberJPA project LOG:19 - LOGGING ASPECT CREATED
+2016-11-12 13:25:49 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
